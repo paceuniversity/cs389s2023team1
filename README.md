@@ -5,8 +5,11 @@
 ## Team members
 
 Austin Parris-Powlette
+
 Aida Bozulan
+
 Joseph Paradiso
+
 
 TOADD picture of the team
 
