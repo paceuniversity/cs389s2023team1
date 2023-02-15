@@ -15,6 +15,8 @@ TOADD picture of the team
 
 ## App description
 
+A very cool app
+
 ## Idea Proposal
 [Idea Proposal](https://docs.google.com/document/d/1xwMZD6h9YxY_G8SSdRE5bczhOR1s8koP/edit?usp=sharing&ouid=112424665803359998557&rtpof=true&sd=true)
 
