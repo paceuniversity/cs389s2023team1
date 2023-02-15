@@ -4,7 +4,10 @@
 
 ## Team members
 
-TOADD names of the team members
+Austin Parris-Powlette
+Aida Bozulan
+Joseph Paradiso
+
 TOADD picture of the team
 
 ## App description
