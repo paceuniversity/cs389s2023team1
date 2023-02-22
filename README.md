@@ -11,7 +11,9 @@ Aida Bozulan
 Joseph Paradiso
 
 
-TOADD picture of the team
+## Picture of the team
+
+[Picture](https://photos.app.goo.gl/UExZBcx4uxYGeB3e8)
 
 ## App description
 
