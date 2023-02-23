@@ -13,7 +13,7 @@ Joseph Paradiso
 
 ## Picture of the team
 
-[Picture](https://photos.app.goo.gl/UExZBcx4uxYGeB3e8)
+![PXL_20230216_200343843 MOTION-01 COVER](https://user-images.githubusercontent.com/69426895/220960961-1f01e2ac-0e8d-431d-abc4-b1017689a92c.jpg)
 
 ## App description
 
