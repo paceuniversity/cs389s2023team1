@@ -31,6 +31,8 @@ An Android application that will help students learn data structures and algorit
 ## Architecture & Design
 [Architecture & Design]()
 
+## Requirements Discovery
+[Requirements Discovery](https://docs.google.com/document/d/1UYafZB6jhHgV5Y-hXIY69hxcS3HvwP_wVunTV1pj3oQ/edit?usp=sharing)
 ## Process
 
 ### Sprint 1
