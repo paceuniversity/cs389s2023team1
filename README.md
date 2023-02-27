@@ -28,11 +28,12 @@ An Android application that will help students learn data structures and algorit
 ## Product Backlog
 [Product Backlog](https://docs.google.com/spreadsheets/d/1qkQGFd7u1pffvGAYsgrXPCA3b4YhBHpnb7P_2SfhN_E/edit?usp=sharing)
 
+## Requirements Discovery
+[Requirements Discovery](https://docs.google.com/document/d/1UYafZB6jhHgV5Y-hXIY69hxcS3HvwP_wVunTV1pj3oQ/edit?usp=sharing)
+
 ## Architecture & Design
 [Architecture & Design]()
 
-## Requirements Discovery
-[Requirements Discovery](https://docs.google.com/document/d/1UYafZB6jhHgV5Y-hXIY69hxcS3HvwP_wVunTV1pj3oQ/edit?usp=sharing)
 ## Process
 
 ### Sprint 1
