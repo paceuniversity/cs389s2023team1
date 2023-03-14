@@ -58,6 +58,7 @@ An Android application that will help students learn data structures and algorit
 * [Sprint retrospective]()
 
 ## Tools & APIs
+Android Studio, Discord, Firebase, Twilio
 
 ## Final delivery
 
