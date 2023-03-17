@@ -1,6 +1,6 @@
 # TEAM 1
 
-## App name
+## buildingBlocks
 
 ## Team members
 
