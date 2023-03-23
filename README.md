@@ -38,7 +38,7 @@ An Android application that will help students learn data structures and algorit
 
 ### Sprint 1
 
-* [Sprint planning]()
+* [Sprint planning](https://github.com/orgs/paceuniversity/projects/9)
 * [Scrums]()
 * [Sprint demo video]()
 * [Sprint retrospective]()
