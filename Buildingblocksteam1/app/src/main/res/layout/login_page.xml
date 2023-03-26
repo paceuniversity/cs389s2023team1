@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/login_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/title"
+        android:textColor="@color/figma_orange"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/login_title"
+        android:textColor="@color/figma_lime_green"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_title" />
+
+    <LinearLayout
+        android:id="@+id/login_layout"
+        android:layout_width="295dp"
+        android:layout_height="333dp"
+        android:background="@color/figma_gray"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="201dp"
+            android:layout_height="51dp"
+            android:ems="10"
+            android:gravity="bottom"
+            android:hint="@string/login_password_hint"
+            android:inputType="textPassword"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="210dp" />
+
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="201dp"
+            android:layout_height="51dp"
+            android:ems="10"
+            android:gravity="bottom"
+            android:hint="@string/login_username_hint"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="85dp"
+            tools:layout_editor_absoluteY="123dp" />
+
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/figma_lime_green"
+            android:backgroundTint="@color/figma_lime_green"
+            android:text="@string/login_button_text"
+            android:textColor="@color/figma_black"
+            app:cornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="451dp" />
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
