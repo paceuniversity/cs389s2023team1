@@ -32,14 +32,14 @@ An Android application that will help students learn data structures and algorit
 [Requirements Discovery](https://docs.google.com/document/d/1UYafZB6jhHgV5Y-hXIY69hxcS3HvwP_wVunTV1pj3oQ/edit?usp=sharing)
 
 ## Architecture & Design
-[Architecture & Design]()
+[Architecture & Design](https://www.figma.com/file/kVTzeZZo9HrILyFP6drxys/Untitled?node-id=0%3A3&t=Vjzb0GF0c8Vab1AV-1)
 
 ## Process
 
 ### Sprint 1
 
-* [Sprint planning]()
-* [Scrums]()
+* [Sprint planning](https://github.com/orgs/paceuniversity/projects/9)
+* [Scrums](https://docs.google.com/document/d/1umYhpTobbSJHQZHPagonoO390HiZHpAhM6HAYhtgN6Q/edit?usp=sharing)
 * [Sprint demo video]()
 * [Sprint retrospective]()
 
