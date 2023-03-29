@@ -20,7 +20,7 @@
     <string name="login_clicked_wrong_page_text">If you do not have an account:</string>
     <string name="login_to_signup_text">Sign up</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_first_fragment">buildingBlocks</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
