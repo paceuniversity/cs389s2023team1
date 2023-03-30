@@ -15,7 +15,7 @@
     <string name="login_password_hint">Enter Password</string>
     <string name="login_username_text">Username</string>
     <string name="login_username_hint">Enter Username</string>
-    <string name="login_title">Login</string>
+    <string name="login_title">Hello Again!</string>
     <string name="login_forgot_password">Forgot password?</string>
     <string name="login_clicked_wrong_page_text">If you do not have an account:</string>
     <string name="login_to_signup_text">Sign up</string>
