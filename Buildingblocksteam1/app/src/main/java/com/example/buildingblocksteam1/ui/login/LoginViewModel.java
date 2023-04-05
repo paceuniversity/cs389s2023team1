@@ -10,6 +10,9 @@ import com.example.buildingblocksteam1.data.LoginRepository;
 import com.example.buildingblocksteam1.data.Result;
 import com.example.buildingblocksteam1.data.model.LoggedInUser;
 import com.example.buildingblocksteam1.R;
+import com.example.buildingblocksteam1.ui.login.LoggedInUserView;
+import com.example.buildingblocksteam1.ui.login.LoginFormState;
+import com.example.buildingblocksteam1.ui.login.LoginResult;
 
 public class LoginViewModel extends ViewModel {
 

@@ -1,29 +1,25 @@
 package com.example.buildingblocksteam1.data;
 
 import com.example.buildingblocksteam1.data.model.LoggedInUser;
+import com.example.buildingblocksteam1.data.model.SignedUpUser;
 
-/**
- * Class that requests authentication and user information from the remote data source and
- * maintains an in-memory cache of login status and user credentials information.
- */
-public class LoginRepository {
+public class SignupRepository {
+    public static volatile SignupRepository instance;
 
-    public static volatile LoginRepository instance;
-
-    public LoginDataSource dataSource;
+    public SignupDataSource dataSource;
 
     // If user credentials will be cached in local storage, it is recommended it be encrypted
     // @see https://developer.android.com/training/articles/keystore
-    public LoggedInUser user = null;
+    public SignedUpUser user = null;
 
     // private constructor : singleton access
-    public LoginRepository(LoginDataSource dataSource) {
+    public SignupRepository(SignupDataSource dataSource) {
         this.dataSource = dataSource;
     }
 
-    public static LoginRepository getInstance(LoginDataSource dataSource) {
+    public static SignupRepository getInstance(SignupDataSource dataSource) {
         if (instance == null) {
-            instance = new LoginRepository(dataSource);
+            instance = new SignupRepository(dataSource);
         }
         return instance;
     }
@@ -37,17 +33,17 @@ public class LoginRepository {
         dataSource.logout();
     }
 
-    public void setLoggedInUser(LoggedInUser user) {
+    public void setLoggedInUser(SignedUpUser user) {
         this.user = user;
         // If user credentials will be cached in local storage, it is recommended it be encrypted
         // @see https://developer.android.com/training/articles/keystore
     }
 
-    public Result<LoggedInUser> login(String username, String password) {
+    public Result<SignedUpUser> login(String username, String password) {
         // handle login
-        Result<LoggedInUser> result = dataSource.login(username, password);
+        Result<SignedUpUser> result = dataSource.login(username, password);
         if (result instanceof Result.Success) {
-            setLoggedInUser(((Result.Success<LoggedInUser>) result).getData());
+            setLoggedInUser(((Result.Success<SignedUpUser>) result).getData());
         }
         return result;
     }
