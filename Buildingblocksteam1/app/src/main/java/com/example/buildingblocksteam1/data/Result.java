@@ -5,7 +5,7 @@ package com.example.buildingblocksteam1.data;
  */
 public class Result<T> {
     // hide the private constructor to limit subclass types (Success, Error)
-    private Result() {
+    public Result() {
     }
 
     @Override
@@ -22,7 +22,7 @@ public class Result<T> {
 
     // Success sub-class
     public final static class Success<T> extends Result {
-        private T data;
+        public T data;
 
         public Success(T data) {
             this.data = data;
