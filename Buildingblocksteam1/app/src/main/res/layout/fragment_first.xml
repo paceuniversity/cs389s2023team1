@@ -4,42 +4,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/black"
     tools:context=".FirstFragment">
 
-    <TextView
-        android:id="@+id/textview_first"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="@string/hello_first_fragment"
-        android:textColor="@color/figma_orange"
-        android:textSize="48sp"
+    <Button
+        android:id="@+id/button_first"
+        android:layout_width="182dp"
+        android:layout_height="55dp"
+        android:text="@string/next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Flashcards"
+        android:background="@color/ColorGreen"
+        android:textColor="@color/black"/>
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="265dp"
+        android:layout_height="123dp"
+        android:src="@drawable/screen_shot_2023_04_05_at_2_21_53_am"
+        app:layout_constraintBottom_toTopOf="@+id/daily_quiz_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/logo"/>
 
     <Button
-        android:id="@+id/button_login"
-        android:layout_width="0dp"
+        android:id="@+id/Log_in_button"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
-        android:backgroundTint="@color/figma_lime_green"
-        android:text="@string/login_title"
-        android:textColor="@color/figma_black"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="68dp"
+        android:text="@string/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo"
+        android:background="@color/black"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/sign_up_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/signup"
+        app:layout_constraintEnd_toStartOf="@+id/Log_in_button"
+        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo"
+        android:background="@color/black"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/daily_quiz_button"
+        android:layout_width="182dp"
+        android:layout_height="55dp"
+        android:text="@string/daily"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/ColorGreen"
+        android:textColor="@color/black"/>
 
     <Button
-        android:id="@+id/button_signup"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:backgroundTint="@color/figma_lime_green"
-        android:text="@string/login_to_signup_text"
-        android:textColor="@color/figma_black"
-        app:layout_constraintBottom_toTopOf="@+id/button_login"
+        android:id="@+id/lessons"
+        android:layout_width="182dp"
+        android:layout_height="55dp"
+        android:text="@string/lessons"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/daily_quiz_button"
+        android:background="@color/ColorGreen"
+        android:textColor="@color/black"/>
 
+    <Button
+        android:id="@+id/Flashcards"
+        android:layout_width="182dp"
+        android:layout_height="55dp"
+        android:text="@string/flashcards"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lessons"
+        android:background="@color/ColorGreen"
+        android:textColor="@color/black"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,11 +9,11 @@
         android:id="@+id/FirstFragment"
         android:name="com.example.buildingblocksteam1.FirstFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_welcome">
+        tools:layout="@layout/fragment_first">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/SecondFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -24,14 +24,5 @@
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.example.buildingblocksteam1.ui.login.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
-        <action
-            android:id="@+id/action_loginFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
     </fragment>
 </navigation>
