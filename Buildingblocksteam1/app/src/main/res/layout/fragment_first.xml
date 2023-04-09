@@ -7,27 +7,6 @@
     android:background="@android:color/black"
     tools:context=".FirstFragment">
 
-<<<<<<< Updated upstream
-    <TextView
-        android:id="@+id/textview_first"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_first_fragment"
-        app:layout_constraintBottom_toTopOf="@id/button_first"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button_first"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first" />
-=======
     <Button
         android:id="@+id/button_login"
         android:layout_width="wrap_content"
@@ -96,5 +75,15 @@
         app:layout_constraintTop_toBottomOf="@+id/lessons"
         android:background="@color/figma_lime_green"
         android:textColor="@color/black"/>
->>>>>>> Stashed changes
+    <Button
+        android:id="@+id/button_first"
+        android:layout_width="182dp"
+        android:layout_height="55dp"
+        android:text="@string/next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Flashcards"
+        android:background="@color/figma_lime_green"
+        android:textColor="@color/black"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
