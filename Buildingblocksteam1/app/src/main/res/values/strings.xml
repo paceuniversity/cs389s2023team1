@@ -9,6 +9,11 @@
     <string name="previous">Previous</string>
     <string name="home_button_to_signup_text">Sign Up</string>
 
+    <string name="logo">Logo</string>
+    <string name="home_daily">Daily Quiz</string>
+    <string name="home_lessons">Lessons</string>
+    <string name="home_flashcards">Flash Cards</string>
+
     <!--Strings for login Page  -->
     <string name="login_button_text">Login</string>
     <string name="login_password_text">Password</string>
