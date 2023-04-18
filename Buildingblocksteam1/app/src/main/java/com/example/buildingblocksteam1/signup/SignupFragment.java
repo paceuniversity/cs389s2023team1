@@ -12,6 +12,7 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,13 +28,21 @@ import com.example.buildingblocksteam1.R;
 import com.example.buildingblocksteam1.databinding.FragmentSignupBinding;
 import com.example.buildingblocksteam1.signup.SignupViewModel;
 import com.example.buildingblocksteam1.ui.login.LoginViewModelFactory;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
 import org.w3c.dom.Text;
-
+/*
 
 public class SignupFragment extends Fragment {
 
+    private static final String TAG = "SignupFragment";
+
+    private FirebaseAuth mAuth;
     private SignupViewModel SignupViewModel;
     private FragmentSignupBinding binding;
 
@@ -43,6 +52,7 @@ public class SignupFragment extends Fragment {
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
+        mAuth = FirebaseAuth.getInstance();
         binding = FragmentSignupBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
@@ -60,6 +70,9 @@ public class SignupFragment extends Fragment {
         final Button signupButton = binding.signupButton;
         final TextView loginText = binding.moveToLogin;
 
+
+
+        FirebaseUser currentUser = mAuth.getCurrentUser();
 
         SignupViewModel.getSignupFormState().observe(getViewLifecycleOwner(), new Observer<SignupFormState>() {
             @Override
@@ -86,9 +99,7 @@ public class SignupFragment extends Fragment {
                 if (SignupResult.getError() != null) {
                     showLoginFailed(SignupResult.getError());
                 }
-                if (SignupResult.getSuccess() != null) {
-                    updateUiWithUser(SignupResult.getSuccess());
-                }
+
             }
         });
 
@@ -129,18 +140,31 @@ public class SignupFragment extends Fragment {
 
         });*/
 
-        signupButton.setOnClickListener(new View.OnClickListener() {
+//        signupButton.setOnClickListener(new View.OnClickListener() {
+            /*
+            final String email = emailEditText.getText().toString();
+            final String password = passwordEditText.getText().toString();
             @Override
             public void onClick(View v) {
-
-                // TODO : Make signup command
-                /*
-                SignupViewModel.login(emailEditText.getText().toString(),
-                        passwordEditText.getText().toString());
-
-                 */
+                mAuth.createUserWithEmailAndPassword(email, password)
+                        .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    // Sign in success, update UI with the signed-in user's information
+                                    Log.d(TAG,"createUserWithEmail:success");
+                                    FirebaseUser user = mAuth.getCurrentUser();
+                                } else {
+                                    // If sign in fails, display a message to the user.
+                                    Log.w(TAG, "createUserWithEmail:failure", task.getException());
+                                }
+                                    ;
+                                }
+                            }
+                        });
             }
         });
+
 
         loginText.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -149,15 +173,17 @@ public class SignupFragment extends Fragment {
                         .navigate(R.id.action_signup_to_login);
             }
         });
+
+
     }
 
 
-    private void updateUiWithUser(SignedupUserView model) {
-        String welcome = getString(R.string.welcome) + model.getDisplayName();
-        // TODO : initiate successful logged in experience
-        if (getContext() != null && getContext().getApplicationContext() != null) {
-            Toast.makeText(getContext().getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
-        }
+    private void updateUI(FirebaseUser user) {
+
+        binding.status.setText(getString(R.string.emailpassword_status_fmt,
+                user.getEmail(), user.isEmailVerified()));
+        binding.detail.setText(getString(R.string.firebase_status_fmt, user.getUid()));
+
     }
 
     private void showLoginFailed(@StringRes Integer errorString) {
@@ -176,3 +202,4 @@ public class SignupFragment extends Fragment {
     }
 }
 
+*/
