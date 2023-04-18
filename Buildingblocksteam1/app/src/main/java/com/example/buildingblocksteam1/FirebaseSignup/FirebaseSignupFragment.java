@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.buildingblocksteam1.R;
@@ -37,6 +38,7 @@ public class FirebaseSignupFragment extends Fragment {
 
     private FirebaseAuth mAuth;
 
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -47,6 +49,8 @@ public class FirebaseSignupFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        final TextView loginText = mBinding.moveToLogin;
 
         // Buttons
         mBinding.emailSignInButton.setOnClickListener(new View.OnClickListener() {
@@ -81,6 +85,14 @@ public class FirebaseSignupFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 reload();
+            }
+        });
+
+        loginText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(FirebaseSignupFragment.this)
+                        .navigate(R.id.action_signup_to_login);
             }
         });
 
@@ -189,9 +201,10 @@ public class FirebaseSignupFragment extends Fragment {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
-                    updateUI(mAuth.getCurrentUser());
+                    NavHostFragment.findNavController(FirebaseSignupFragment.this)
+                            .navigate(R.id.action_reload_to_FirstFragment);
                     Toast.makeText(getContext(),
-                            "Reload successful!",
+                            "You have Successfully Signed In!",
                             Toast.LENGTH_SHORT).show();
                 } else {
                     Log.e(TAG, "reload", task.getException());
@@ -207,6 +220,8 @@ public class FirebaseSignupFragment extends Fragment {
         boolean valid = true;
 
         String email = mBinding.fieldEmail.getText().toString();
+        String confirm_email = mBinding.signupConfirmEmail.getText().toString();
+
         if (TextUtils.isEmpty(email)) {
             mBinding.fieldEmail.setError("Required.");
             valid = false;
@@ -214,12 +229,28 @@ public class FirebaseSignupFragment extends Fragment {
             mBinding.fieldEmail.setError(null);
         }
 
+        if (email.equals(confirm_email)){
+            mBinding.signupConfirmEmail.setError("Emails do not match.");
+            valid = false;
+        } else {
+            mBinding.signupConfirmEmail.setError(null);
+        }
+
         String password = mBinding.fieldPassword.getText().toString();
+        String confirm_password = mBinding.signupConfirmPassword.getText().toString();
+
         if (TextUtils.isEmpty(password)) {
             mBinding.fieldPassword.setError("Required.");
             valid = false;
         } else {
             mBinding.fieldPassword.setError(null);
+        }
+
+        if (password.equals(confirm_password)){
+            mBinding.signupConfirmPassword.setError("Passwords do not match.");
+            valid = false;
+        } else {
+            mBinding.signupConfirmPassword.setError(null);
         }
 
         return valid;
@@ -266,6 +297,8 @@ public class FirebaseSignupFragment extends Fragment {
         }
     }
 */
+
+
     @Override
     public void onDestroyView() {
         super.onDestroyView();
