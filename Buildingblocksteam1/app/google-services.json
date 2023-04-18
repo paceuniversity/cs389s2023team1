@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "112251352619",
+    "project_id": "buildingblocks-7cd07",
+    "storage_bucket": "buildingblocks-7cd07.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112251352619:android:c055f60726a02f29619c6e",
+        "android_client_info": {
+          "package_name": "com.example.buildingblocksteam1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "112251352619-3gdscl8tcs9mbupurpdmimklsvrgkiib.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMtAljHFKlkLpjpn3WKMyCACp8qJrVkJE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "112251352619-3gdscl8tcs9mbupurpdmimklsvrgkiib.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
