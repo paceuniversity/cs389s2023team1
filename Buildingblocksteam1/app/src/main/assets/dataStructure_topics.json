@@ -1,0 +1,28 @@
+{
+  "data_structures": [
+    {
+      "name": "Arrays"
+    },
+    {
+      "name": "Linked Lists"
+    },
+    {
+      "name": "Stacks"
+    },
+    {
+      "name": "Queues"
+    },
+    {
+      "name": "Trees"
+    },
+    {
+      "name": "Graphs"
+    },
+    {
+      "name": "Hash Tables"
+    },
+    {
+      "name": "Heaps"
+    }
+  ]
+}

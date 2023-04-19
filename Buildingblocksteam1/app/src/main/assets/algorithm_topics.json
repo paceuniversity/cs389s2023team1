@@ -1,0 +1,28 @@
+{
+  "algorithms": [
+    {
+      "name": "Sorting Algorithms"
+    },
+    {
+      "name": "Search Algorithms"
+    },
+    {
+      "name": "Pathfinding Algorithms"
+    },
+    {
+      "name": "Graph Algorithms"
+    },
+    {
+      "name": "String Algorithms"
+    },
+    {
+      "name": "Dynamic Programming"
+    },
+    {
+      "name": "Backtracking"
+    },
+    {
+      "name": "Greedy Algorithms"
+    }
+  ]
+}
