@@ -48,7 +48,7 @@ An Android application that will help students learn data structures and algorit
 * [Sprint planning](https://github.com/orgs/paceuniversity/projects/9)
 * [Scrums](https://docs.google.com/document/d/1BUyiAykA3nl5QJDARisRQsGt9x4LYq266Lr6gvnZLko/edit?usp=sharing)
 * [Sprint demo video]()
-* [Sprint retrospective]()
+* [Sprint retrospective](https://docs.google.com/document/d/1h7MF1d2dsdekRZDEHgwD_Wd_ftvQkEvbd0rNiG-HUGk/edit?usp=sharing)
 
 ### Sprint 3
 
