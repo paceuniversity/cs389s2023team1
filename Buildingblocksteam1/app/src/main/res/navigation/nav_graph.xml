@@ -13,7 +13,7 @@
 
         <action
             android:id="@+id/action_FirstFragment_to_login"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/firebaseLoginFragment" />
         <action
             android:id="@+id/action_FirstFragment_to_signup"
             app:destination="@id/firebaseSignupFragment" />
@@ -36,9 +36,6 @@
         <action
             android:id="@+id/action_loginFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
-        <action
-            android:id="@+id/action_login_to_signup"
-            app:destination="@id/signupFragment" />
     </fragment>
     <fragment
         android:id="@+id/signupFragment"
@@ -52,9 +49,21 @@
         tools:layout="@layout/fragment_firebase_signup" >
         <action
             android:id="@+id/action_signup_to_login"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/firebaseLoginFragment" />
         <action
             android:id="@+id/action_reload_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firebaseLoginFragment"
+        android:name="com.example.buildingblocksteam1.FirebaseLogin.FirebaseLoginFragment"
+        android:label="fragment_firebase_login"
+        tools:layout="@layout/fragment_firebase_login" >
+        <action
+            android:id="@+id/action_login_to_signup"
+            app:destination="@id/firebaseSignupFragment" />
+        <action
+            android:id="@+id/action_reload_to_FirstFragment2"
             app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>
