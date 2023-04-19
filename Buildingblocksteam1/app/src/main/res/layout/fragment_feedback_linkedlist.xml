@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LinkedListQuizFragment">
+    tools:context=".FeedbackLinkedlistFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -60,6 +60,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:tag="true"
+                    android:textStyle="bold"
                     android:text="C. Index-based access" />
 
                 <RadioButton
@@ -93,6 +94,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:tag="true"
+                    android:textStyle="bold"
                     android:text="B. 1" />
 
                 <RadioButton
@@ -144,6 +146,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:tag="true"
+                    android:textStyle="bold"
                     android:text="D. Traversing can be slow" />
 
             </RadioGroup>
@@ -165,6 +168,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:tag="true"
+                    android:textStyle="bold"
                     android:text="A. O(n)" />
 
                 <RadioButton
@@ -222,6 +226,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:tag="true"
+                    android:textStyle="bold"
                     android:text="D. All of the above" />
 
             </RadioGroup>
@@ -249,6 +254,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:tag="true"
+                    android:textStyle="bold"
                     android:text="B. O(1)" />
 
                 <RadioButton
@@ -282,6 +288,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:tag="true"
+                    android:textStyle="bold"
                     android:text="A. The first node" />
 
                 <RadioButton
@@ -339,6 +346,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:tag="true"
+                    android:textStyle="bold"
                     android:text="D. Multi-level linked list" />
 
             </RadioGroup>
@@ -360,6 +368,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:tag="true"
+                    android:textStyle="bold"
                     android:text="A. For loop" />
 
                 <RadioButton
@@ -399,6 +408,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:tag="true"
+                    android:textStyle="bold"
                     android:text="A. O(n)" />
 
                 <RadioButton

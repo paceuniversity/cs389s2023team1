@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/figma_black"
-    tools:context=".QuizMenuFragment">
+    tools:context=".QuizScoresFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -31,32 +31,26 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/button_quiz_scores"
+                android:id="@+id/button_linked_list2"
                 android:layout_width="411dp"
                 android:layout_height="wrap_content"
-                android:text="See All Quiz Scores"></Button>
+                android:text="LinkedList Quiz Score: Not Completed"></Button>
 
             <Button
-                android:id="@+id/button_linked_list"
+                android:id="@+id/button_array_list2"
                 android:layout_width="411dp"
                 android:layout_height="wrap_content"
-                android:text="@string/quiz_linked_list"></Button>
-
-            <Button
-                android:id="@+id/button_array_list"
-                android:layout_width="411dp"
-                android:layout_height="wrap_content"
-                android:text="@string/quiz_array_list"></Button>
+                android:text="ArrayList Quiz Score: Not Completed"></Button>
 
             <Button
                 android:layout_width="411dp"
                 android:layout_height="wrap_content"
-                android:text="@string/quiz_placeholder1"></Button>
+                android:text="Placeholder Quiz Score: Not Completed"></Button>
 
             <Button
                 android:layout_width="411dp"
                 android:layout_height="wrap_content"
-                android:text="@string/quiz_placeholder2"></Button>
+                android:text="Placeholder2 Quiz Score: Not Completed"></Button>
 
         </LinearLayout>
 

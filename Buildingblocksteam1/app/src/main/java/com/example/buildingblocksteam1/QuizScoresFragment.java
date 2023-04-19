@@ -2,30 +2,23 @@ package com.example.buildingblocksteam1;
 
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.TextView;
 
-import com.example.buildingblocksteam1.databinding.FragmentLinkedListQuizBinding;
-import com.example.buildingblocksteam1.databinding.FragmentLinkedListQuizResultBinding;
+import com.example.buildingblocksteam1.databinding.FragmentQuizMenuBinding;
+import com.example.buildingblocksteam1.databinding.FragmentQuizScoresBinding;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link LinkedListQuizResultFragment#newInstance} factory method to
+ * Use the {@link QuizScoresFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class LinkedListQuizResultFragment extends Fragment {
+public class QuizScoresFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,15 +28,12 @@ public class LinkedListQuizResultFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+    private FragmentQuizScoresBinding binding;
     private SharedViewModel viewModel;
-    private FragmentLinkedListQuizResultBinding binding;
 
-    public LinkedListQuizResultFragment() {
+    public QuizScoresFragment() {
         // Required empty public constructor
     }
-
-
 
     /**
      * Use this factory method to create a new instance of
@@ -51,11 +41,11 @@ public class LinkedListQuizResultFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment LinkedListQuizResultFragment.
+     * @return A new instance of fragment QuizScoresFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static LinkedListQuizResultFragment newInstance(String param1, String param2) {
-        LinkedListQuizResultFragment fragment = new LinkedListQuizResultFragment();
+    public static QuizScoresFragment newInstance(String param1, String param2) {
+        QuizScoresFragment fragment = new QuizScoresFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -70,14 +60,14 @@ public class LinkedListQuizResultFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-        SharedViewModel viewModel = new ViewModelProvider(this).get(SharedViewModel.class);
+        viewModel = new ViewModelProvider(this).get(SharedViewModel.class);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        binding = FragmentLinkedListQuizResultBinding.inflate(inflater, container, false);
+        binding = FragmentQuizScoresBinding.inflate(inflater, container, false);
 
         viewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
 
@@ -85,25 +75,12 @@ public class LinkedListQuizResultFragment extends Fragment {
         viewModel.getData().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(String data) {
-                binding.linkedlistResult.setText((viewModel.getData().getValue() + "%"));
-                binding.seekBar.setProgress(Integer.parseInt(viewModel.getData().getValue()) / 10);
+                binding.buttonLinkedList2.setText(("LinkedList Quiz Score: " + viewModel.getData().getValue() + "%"));
             }
         });
+
         return binding.getRoot();
 
-        //return inflater.inflate(R.layout.fragment_linked_list_quiz_result, container, false);
-
-    }
-
-    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        binding.button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavHostFragment.findNavController(LinkedListQuizResultFragment.this)
-                        .navigate(R.id.action_linkedListQuizResultFragment_to_feedbackLinkedlistFragment);
-            }
-        });
+        //return inflater.inflate(R.layout.fragment_quiz_scores, container, false);
     }
 }
