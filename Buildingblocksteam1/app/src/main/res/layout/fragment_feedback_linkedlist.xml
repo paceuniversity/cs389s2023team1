@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FeedbackLinkedlistFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/article_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/figma_black"
+        android:gravity="center"
+        android:padding="@dimen/padding_regular"
+        android:text="@string/quiz_title"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textColor="@color/figma_orange"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/article_heading">
+
+
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/linkedlist_question1"></TextView>
+
+            <RadioGroup
+                android:id="@+id/radioGroup1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButton11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A. Nodes" />
+
+                <RadioButton
+                    android:id="@+id/radioButton12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B. Linear" />
+
+                <RadioButton
+                    android:id="@+id/radioButton13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="true"
+                    android:textStyle="bold"
+                    android:text="C. Index-based access" />
+
+                <RadioButton
+                    android:id="@+id/radioButton14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D. Next pointer" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/linkedlist_question2"></TextView>
+
+            <RadioGroup
+                android:id="@+id/radioGroup2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButton21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A. 0" />
+
+                <RadioButton
+                    android:id="@+id/radioButton22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="true"
+                    android:textStyle="bold"
+                    android:text="B. 1" />
+
+                <RadioButton
+                    android:id="@+id/radioButton23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C. 2" />
+
+                <RadioButton
+                    android:id="@+id/radioButton24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D. 3" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/linkedlist_question3"></TextView>
+
+            <RadioGroup
+                android:id="@+id/radioGroup3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButton31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A. Constant time insertion and deletion" />
+
+                <RadioButton
+                    android:id="@+id/radioButton32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B. Random access" />
+
+                <RadioButton
+                    android:id="@+id/radioButton33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C. Memory efficient" />
+
+                <RadioButton
+                    android:id="@+id/radioButton34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="true"
+                    android:textStyle="bold"
+                    android:text="D. Traversing can be slow" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/linkedlist_question4"></TextView>
+
+            <RadioGroup
+                android:id="@+id/radioGroup4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButton41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="true"
+                    android:textStyle="bold"
+                    android:text="A. O(n)" />
+
+                <RadioButton
+                    android:id="@+id/radioButton42"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B. O(1)" />
+
+                <RadioButton
+                    android:id="@+id/radioButton43"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C. O(log n)" />
+
+                <RadioButton
+                    android:id="@+id/radioButton44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D. O(n log n)" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/linkedlist_question5"></TextView>
+
+            <RadioGroup
+                android:id="@+id/radioGroup5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButton51"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A. Each node has two pointers: one to the next node and one to the previous node" />
+
+                <RadioButton
+                    android:id="@+id/radioButton52"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B. Insertion and deletion operations can be slower than in a singly linked list" />
+
+                <RadioButton
+                    android:id="@+id/radioButton53"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C. Can be used to implement stacks and queues" />
+
+                <RadioButton
+                    android:id="@+id/radioButton54"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="true"
+                    android:textStyle="bold"
+                    android:text="D. All of the above" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/linkedlist_question6"></TextView>
+
+            <RadioGroup
+                android:id="@+id/radioGroup6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButton61"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A. O(n)" />
+
+                <RadioButton
+                    android:id="@+id/radioButton62"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="true"
+                    android:textStyle="bold"
+                    android:text="B. O(1)" />
+
+                <RadioButton
+                    android:id="@+id/radioButton63"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C. O(log n)" />
+
+                <RadioButton
+                    android:id="@+id/radioButton64"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D. O(n log n)" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/linkedlist_question7"></TextView>
+
+            <RadioGroup
+                android:id="@+id/radioGroup7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButton71"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="true"
+                    android:textStyle="bold"
+                    android:text="A. The first node" />
+
+                <RadioButton
+                    android:id="@+id/radioButton72"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B. The second node" />
+
+                <RadioButton
+                    android:id="@+id/radioButton73"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C. The previous node" />
+
+                <RadioButton
+                    android:id="@+id/radioButton74"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D. The null node" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/linkedlist_question8"></TextView>
+
+            <RadioGroup
+                android:id="@+id/radioGroup8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButton81"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A. Singly linked list" />
+
+                <RadioButton
+                    android:id="@+id/radioButton82"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B. Doubly linked list" />
+
+                <RadioButton
+                    android:id="@+id/radioButton83"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C. Circular linked list" />
+
+                <RadioButton
+                    android:id="@+id/radioButton84"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="true"
+                    android:textStyle="bold"
+                    android:text="D. Multi-level linked list" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/linkedlist_question9"></TextView>
+
+            <RadioGroup
+                android:id="@+id/radioGroup9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButton91"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="true"
+                    android:textStyle="bold"
+                    android:text="A. For loop" />
+
+                <RadioButton
+                    android:id="@+id/radioButton92"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B. While loop" />
+
+                <RadioButton
+                    android:id="@+id/radioButton93"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C. Recursion" />
+
+                <RadioButton
+                    android:id="@+id/radioButton94"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D. Do-while loop" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/linkedlist_question10"></TextView>
+
+            <RadioGroup
+                android:id="@+id/radioGroup10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButton101"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:tag="true"
+                    android:textStyle="bold"
+                    android:text="A. O(n)" />
+
+                <RadioButton
+                    android:id="@+id/radioButton102"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B. O(1)" />
+
+                <RadioButton
+                    android:id="@+id/radioButton103"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C. O(log n)" />
+
+                <RadioButton
+                    android:id="@+id/radioButton104"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D. O(n log n)" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/button_submit"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:text="Submit"></Button>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</RelativeLayout>

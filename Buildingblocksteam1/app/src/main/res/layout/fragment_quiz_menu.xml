@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/figma_black"
+    tools:context=".QuizMenuFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/article_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_regular"
+        android:text="@string/quiz_title"
+        android:textAppearance=
+            "@android:style/TextAppearance.DeviceDefault.Large"
+        android:textColor="@color/figma_orange"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/article_heading">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button_quiz_scores"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:text="See All Quiz Scores"></Button>
+
+            <Button
+                android:id="@+id/button_linked_list"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:text="@string/quiz_linked_list"></Button>
+
+            <Button
+                android:id="@+id/button_array_list"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:text="@string/quiz_array_list"></Button>
+
+            <Button
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:text="@string/quiz_placeholder1"></Button>
+
+            <Button
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:text="@string/quiz_placeholder2"></Button>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</RelativeLayout>

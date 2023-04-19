@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_signup"
             app:destination="@id/firebaseSignupFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -52,4 +55,44 @@
             android:id="@+id/action_reload_to_FirstFragment2"
             app:destination="@id/FirstFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/quizMenuFragment"
+        android:name="com.example.buildingblocksteam1.QuizMenuFragment"
+        android:label="fragment_quiz_menu"
+        tools:layout="@layout/fragment_quiz_menu" >
+        <action
+            android:id="@+id/action_quizMenuFragment_to_linkedListQuizFragment"
+            app:destination="@id/linkedListQuizFragment" />
+        <action
+            android:id="@+id/action_quizMenuFragment_to_quizScoresFragment"
+            app:destination="@id/quizScoresFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/linkedListQuizFragment"
+        android:name="com.example.buildingblocksteam1.LinkedListQuizFragment"
+        android:label="fragment_linked_list_quiz"
+        tools:layout="@layout/fragment_linked_list_quiz" >
+        <action
+            android:id="@+id/action_linkedListQuizFragment_to_linkedListQuizResultFragment"
+            app:destination="@id/linkedListQuizResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/linkedListQuizResultFragment"
+        android:name="com.example.buildingblocksteam1.LinkedListQuizResultFragment"
+        android:label="fragment_linked_list_quiz_result"
+        tools:layout="@layout/fragment_linked_list_quiz_result" >
+        <action
+            android:id="@+id/action_linkedListQuizResultFragment_to_feedbackLinkedlistFragment"
+            app:destination="@id/feedbackLinkedlistFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedbackLinkedlistFragment"
+        android:name="com.example.buildingblocksteam1.FeedbackLinkedlistFragment"
+        android:label="fragment_feedback_linkedlist"
+        tools:layout="@layout/fragment_feedback_linkedlist" />
+    <fragment
+        android:id="@+id/quizScoresFragment"
+        android:name="com.example.buildingblocksteam1.QuizScoresFragment"
+        android:label="fragment_quiz_scores"
+        tools:layout="@layout/fragment_quiz_scores" />
 </navigation>
