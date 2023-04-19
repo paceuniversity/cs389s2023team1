@@ -85,5 +85,14 @@ public class QuizMenuFragment extends Fragment {
                         .navigate(R.id.action_quizMenuFragment_to_linkedListQuizFragment);
             }
         });
+
+        binding.buttonQuizScores.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(QuizMenuFragment.this)
+                        .navigate(R.id.action_quizMenuFragment_to_quizScoresFragment);
+            }
+        });
     }
 }
