@@ -53,14 +53,7 @@ public class FirebaseSignupFragment extends Fragment {
         final TextView loginText = mBinding.moveToLogin;
 
         // Buttons
-        mBinding.emailSignInButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String email = mBinding.fieldEmail.getText().toString();
-                String password = mBinding.fieldPassword.getText().toString();
-                signIn(email, password);
-            }
-        });
+
         mBinding.emailCreateAccountButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,24 +62,14 @@ public class FirebaseSignupFragment extends Fragment {
                 createAccount(email, password);
             }
         });
-        mBinding.signOutButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                signOut();
-            }
-        });
+
         mBinding.verifyEmailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 sendEmailVerification();
             }
         });
-        mBinding.reloadButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                reload();
-            }
-        });
+
 
         loginText.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -125,13 +108,14 @@ public class FirebaseSignupFragment extends Fragment {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            updateUI(user);
+                            reload();
+
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "createUserWithEmail:failure", task.getException());
                             Toast.makeText(getContext(), "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
-                            updateUI(null);
+
                         }
 
                     }
@@ -144,24 +128,7 @@ public class FirebaseSignupFragment extends Fragment {
             return;
         }
 
-        mAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(requireActivity(), new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d(TAG, "signInWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            updateUI(user);
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w(TAG, "signInWithEmail:failure", task.getException());
-                            Toast.makeText(getContext(), "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
-                            updateUI(null);
-                        }
-                    }
-                });
+
     }
 
     private void signOut() {
@@ -186,6 +153,7 @@ public class FirebaseSignupFragment extends Fragment {
                             Toast.makeText(getContext(),
                                     "Verification email sent to " + user.getEmail(),
                                     Toast.LENGTH_SHORT).show();
+
                         } else {
                             Log.e(TAG, "sendEmailVerification", task.getException());
                             Toast.makeText(getContext(),
@@ -204,7 +172,7 @@ public class FirebaseSignupFragment extends Fragment {
                     NavHostFragment.findNavController(FirebaseSignupFragment.this)
                             .navigate(R.id.action_reload_to_FirstFragment);
                     Toast.makeText(getContext(),
-                            "You have Successfully Signed In!",
+                            "You have successfully Signed In!",
                             Toast.LENGTH_SHORT).show();
                 } else {
                     Log.e(TAG, "reload", task.getException());
@@ -228,13 +196,19 @@ public class FirebaseSignupFragment extends Fragment {
         } else {
             mBinding.fieldEmail.setError(null);
         }
-
-        if (email.equals(confirm_email)){
+        if (TextUtils.isEmpty(confirm_email)) {
+            mBinding.signupConfirmEmail.setError("Required.");
+            valid = false;
+        } else {
+            mBinding.signupConfirmEmail.setError(null);
+        }
+        if (!email.equals(confirm_email)){
             mBinding.signupConfirmEmail.setError("Emails do not match.");
             valid = false;
         } else {
             mBinding.signupConfirmEmail.setError(null);
         }
+
 
         String password = mBinding.fieldPassword.getText().toString();
         String confirm_password = mBinding.signupConfirmPassword.getText().toString();
@@ -245,8 +219,14 @@ public class FirebaseSignupFragment extends Fragment {
         } else {
             mBinding.fieldPassword.setError(null);
         }
+        if (TextUtils.isEmpty(confirm_password)) {
+            mBinding.signupConfirmPassword.setError("Required.");
+            valid = false;
+        } else {
+            mBinding.signupConfirmPassword.setError(null);
+        }
 
-        if (password.equals(confirm_password)){
+        if (!password.equals(confirm_password)){
             mBinding.signupConfirmPassword.setError("Passwords do not match.");
             valid = false;
         } else {
@@ -260,22 +240,11 @@ public class FirebaseSignupFragment extends Fragment {
 
         if (user != null) {
 
-            mBinding.emailPasswordButtons.setVisibility(View.GONE);
-            mBinding.emailPasswordFields.setVisibility(View.GONE);
-            mBinding.signedInButtons.setVisibility(View.VISIBLE);
-
             if (user.isEmailVerified()) {
                 mBinding.verifyEmailButton.setVisibility(View.GONE);
             } else {
                 mBinding.verifyEmailButton.setVisibility(View.VISIBLE);
             }
-        } else {
-            mBinding.status.setText(R.string.signed_out);
-            mBinding.detail.setText(null);
-
-            mBinding.emailPasswordButtons.setVisibility(View.VISIBLE);
-            mBinding.emailPasswordFields.setVisibility(View.VISIBLE);
-            mBinding.signedInButtons.setVisibility(View.GONE);
         }
     }
 

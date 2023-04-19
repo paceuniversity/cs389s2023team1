@@ -75,15 +75,17 @@
         app:layout_constraintTop_toBottomOf="@+id/lessons"
         android:background="@color/figma_lime_green"
         android:textColor="@color/black"/>
+
     <Button
         android:id="@+id/button_first"
         android:layout_width="182dp"
         android:layout_height="55dp"
+        android:background="@color/figma_lime_green"
         android:text="@string/next"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Flashcards"
-        android:background="@color/figma_lime_green"
-        android:textColor="@color/black"/>
+        app:layout_constraintTop_toBottomOf="@+id/Flashcards" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
