@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.example.buildingblocksteam1.data.model.SignedUpUser;
 import com.example.buildingblocksteam1.databinding.FragmentFirstBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -36,6 +37,14 @@ public class FirstFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
 
+
+
+
+
+
+
+
+
         binding.buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,11 +52,11 @@ public class FirstFragment extends Fragment {
                         .navigate(R.id.action_FirstFragment_to_login);
             }
         });
-        binding.dailyQuizButton.setOnClickListener(new View.OnClickListener() {
+        binding.lessons.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(FirstFragment.this)
-                        .navigate(R.id.action_FirstFragment_to_quizMenuFragment);
+                        .navigate(R.id.action_FirstFragment_to_lessonsFragment);
             }
         });
         binding.buttonSignup.setOnClickListener(new View.OnClickListener() {

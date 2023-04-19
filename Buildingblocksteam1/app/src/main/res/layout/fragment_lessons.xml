@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LessonsFragment">
+    <?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@android:color/black"
+        >
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose Category"
+            android:textColor="@color/figma_orange"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:padding="16dp"/>
+
+        <Button
+            android:id="@+id/dataStructuresButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data Structures"
+            android:textColor="@color/figma_orange"
+            android:textSize="20sp"
+            android:padding="16dp"/>
+
+        <Button
+            android:id="@+id/algorithmsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Algorithms"
+            android:textColor="@color/figma_orange"
+            android:textSize="20sp"
+            android:padding="16dp"/>
+
+    </LinearLayout>
+
+</FrameLayout>

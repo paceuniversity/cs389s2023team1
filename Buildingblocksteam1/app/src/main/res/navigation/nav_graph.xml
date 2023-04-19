@@ -20,6 +20,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_quizMenuFragment"
             app:destination="@id/quizMenuFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_lessonsFragment2"
+            app:destination="@id/lessonsFragment2" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -95,4 +98,35 @@
         android:name="com.example.buildingblocksteam1.QuizScoresFragment"
         android:label="fragment_quiz_scores"
         tools:layout="@layout/fragment_quiz_scores" />
+    <fragment
+        android:id="@+id/lessonsFragment2"
+        android:name="com.example.buildingblocksteam1.LessonsFragment"
+        android:label="fragment_lessons"
+        tools:layout="@layout/fragment_lessons" >
+        <action
+            android:id="@+id/action_lessonsFragment2_to_algorithmsTopicsFragment2"
+            app:destination="@id/algorithmsTopicsFragment2" />
+        <action
+            android:id="@+id/action_lessonsFragment2_to_data_structure_activity2"
+            app:destination="@id/data_structure_activity2" />
+    </fragment>
+    <fragment
+        android:id="@+id/lecture_activity2"
+        android:name="com.example.buildingblocksteam1.Lecture_activity"
+        android:label="fragment_lecture_activity"
+        tools:layout="@layout/fragment_lecture_activity" />
+    <fragment
+        android:id="@+id/algorithmsTopicsFragment2"
+        android:name="com.example.buildingblocksteam1.AlgorithmsTopicsFragment"
+        android:label="fragment_algorithms_topics"
+        tools:layout="@layout/fragment_algorithms_topics" >
+        <action
+            android:id="@+id/action_algorithmsTopicsFragment2_to_lecture_activity2"
+            app:destination="@id/lecture_activity2" />
+    </fragment>
+    <fragment
+        android:id="@+id/data_structure_activity2"
+        android:name="com.example.buildingblocksteam1.data_structure_activity"
+        android:label="fragment_data_structure_activity"
+        tools:layout="@layout/fragment_data_structure_activity" />
 </navigation>
