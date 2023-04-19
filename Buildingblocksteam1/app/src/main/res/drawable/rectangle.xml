@@ -2,9 +2,12 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="@color/figma_gray">
+            <corners android:bottomLeftRadius="30dp"
+                     android:bottomRightRadius="30dp"
+                     android:topLeftRadius="30dp"
+                     android:topRightRadius="30dp"/>
 
-            </solid>
+            <solid android:color="@color/figma_gray"/>
         </shape>
     </item>
 </selector>

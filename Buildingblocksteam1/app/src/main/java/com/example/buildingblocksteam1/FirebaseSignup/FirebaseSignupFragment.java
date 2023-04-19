@@ -122,20 +122,6 @@ public class FirebaseSignupFragment extends Fragment {
                 });
     }
 
-    private void signIn(String email, String password) {
-        Log.d(TAG, "signIn:" + email);
-        if (!validateForm()) {
-            return;
-        }
-
-
-    }
-
-    private void signOut() {
-        mAuth.signOut();
-        updateUI(null);
-    }
-
     private void sendEmailVerification() {
         // Disable button
         mBinding.verifyEmailButton.setEnabled(false);
@@ -234,18 +220,6 @@ public class FirebaseSignupFragment extends Fragment {
         }
 
         return valid;
-    }
-
-    private void updateUI(FirebaseUser user) {
-
-        if (user != null) {
-
-            if (user.isEmailVerified()) {
-                mBinding.verifyEmailButton.setVisibility(View.GONE);
-            } else {
-                mBinding.verifyEmailButton.setVisibility(View.VISIBLE);
-            }
-        }
     }
 
 
