@@ -16,7 +16,7 @@
             android:layout_width="383dp"
             android:layout_height="399dp"
             android:layout_marginTop="250dp"
-            android:text="@string/bubble_sort"
+            android:text="bubble sort"
             android:textColor="@color/figma_orange"
             android:textSize="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
