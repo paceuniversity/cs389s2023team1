@@ -4,11 +4,21 @@
     android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/figma_black"
+    android:background="@color/black"
     android:orientation="vertical"
     android:weightSum="4"
     tools:context=".FirebaseSignup.FirebaseSignupFragment">
 
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:src="@drawable/bg_removed_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:focusable="true" />
 
     <TextView
             android:id="@+id/signup_title"
@@ -124,23 +134,23 @@
         app:layout_constraintTop_toBottomOf="@+id/fieldPassword" />
 
 
-
-        <Button
-            android:id="@+id/emailCreateAccountButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/signup_button_text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/signup_confirm_password" />
+    <Button
+        android:id="@+id/emailCreateAccountButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/signup_button_text"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup_confirm_password" />
 
     <TextView
         android:id="@+id/signup_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
         android:text="@string/signup_clicked_wrong_page_test"
         android:textColor="@android:color/white"
         android:textSize="18sp"
@@ -151,8 +161,8 @@
         android:id="@+id/move_to_login"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
         android:clickable="true"
         android:focusable="true"
         android:gravity="center"
@@ -164,15 +174,6 @@
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/signup_info"
         app:layout_constraintTop_toBottomOf="@+id/background_box" />
-
-
-        <Button
-            android:id="@+id/verifyEmailButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/verify_email"
-            android:visibility="invisible"
-            />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

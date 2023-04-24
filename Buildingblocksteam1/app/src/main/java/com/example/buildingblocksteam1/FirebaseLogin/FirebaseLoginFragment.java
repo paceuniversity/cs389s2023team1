@@ -60,6 +60,22 @@ public class FirebaseLoginFragment extends Fragment {
         });
         mAuth = FirebaseAuth.getInstance();
 
+        mBinding.moveToSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(FirebaseLoginFragment.this)
+                        .navigate(R.id.action_login_to_signup);
+            }
+        });
+
+        mBinding.backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(FirebaseLoginFragment.this)
+                        .navigate(R.id.action_reload_to_FirstFragment2);
+            }
+        });
+
     }
 
     private void LogIn(String email, String password) {
