@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,20 +8,30 @@
 
     <!-- TODO: Update blank fragment layout -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/black">
 
-
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:src="@drawable/bg_removed_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:focusable="true" />
         <Button
             android:id="@+id/button8"
             android:layout_width="408dp"
             android:layout_height="50dp"
+            android:layout_marginBottom="40dp"
             android:text="String Matching"
+            android:textColor="@color/figma_orange"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.333"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
@@ -28,6 +39,8 @@
             android:layout_width="408dp"
             android:layout_height="50dp"
             android:text="Sorting Algorithms"
+            android:layout_marginBottom="2dp"
+            android:textColor="@color/figma_orange"
             app:layout_constraintBottom_toTopOf="@+id/button11"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -36,7 +49,9 @@
             android:id="@+id/button11"
             android:layout_width="408dp"
             android:layout_height="50dp"
+            android:layout_marginBottom="2dp"
             android:text="Searching Algorithms"
+            android:textColor="@color/figma_orange"
             app:layout_constraintBottom_toTopOf="@+id/button17"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -44,42 +59,48 @@
             android:id="@+id/button17"
             android:layout_width="408dp"
             android:layout_height="50dp"
-            android:layout_marginBottom="22dp"
+            android:layout_marginBottom="2dp"
             android:text="Greedy Algorithms"
+            android:textColor="@color/figma_orange"
             app:layout_constraintBottom_toTopOf="@+id/button18"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/button18"
             android:layout_width="408dp"
             android:layout_height="50dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="2dp"
             android:text="Divide and Conquer"
+            android:textColor="@color/figma_orange"
             app:layout_constraintBottom_toTopOf="@+id/button12"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/button12"
             android:layout_width="408dp"
             android:layout_height="50dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="2dp"
             android:text="Dynamic Programming"
+            android:textColor="@color/figma_orange"
             app:layout_constraintBottom_toTopOf="@+id/button13"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/button13"
             android:layout_width="408dp"
             android:layout_height="50dp"
-            android:layout_marginBottom="20dp"
             android:text="Backtracking"
+            android:textColor="@color/figma_orange"
+            android:layout_marginBottom="2dp"
             app:layout_constraintBottom_toTopOf="@+id/button14"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
@@ -87,6 +108,8 @@
             android:layout_width="408dp"
             android:layout_height="50dp"
             android:text="Brute Force"
+            android:textColor="@color/figma_orange"
+            android:layout_marginBottom="2dp"
             app:layout_constraintBottom_toTopOf="@+id/button15"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -96,10 +119,12 @@
             android:id="@+id/button15"
             android:layout_width="408dp"
             android:layout_height="50dp"
-            android:layout_marginBottom="11dp"
+            android:layout_marginBottom="2dp"
             android:text="Randomized"
+            android:textColor="@color/figma_orange"
             app:layout_constraintBottom_toTopOf="@+id/button8"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
@@ -108,7 +133,7 @@
             android:layout_height="wrap_content"
             android:text="Algorithms"
             android:textColor="@color/figma_orange"
-            android:textSize="30dp"
+            android:textSize="34dp"
             app:layout_constraintBottom_toTopOf="@+id/button7"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
