@@ -1,4 +1,4 @@
-package com.example.buildingblocksteam1;
+package com.example.buildingblocksteam1.Quiz;
 
 import android.os.Bundle;
 
@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.buildingblocksteam1.R;
 import com.example.buildingblocksteam1.databinding.FragmentFirstBinding;
 import com.example.buildingblocksteam1.databinding.FragmentQuizMenuBinding;
 
@@ -92,6 +93,14 @@ public class QuizMenuFragment extends Fragment {
 
                 NavHostFragment.findNavController(QuizMenuFragment.this)
                         .navigate(R.id.action_quizMenuFragment_to_quizScoresFragment);
+            }
+        });
+        binding.backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(QuizMenuFragment.this)
+                        .navigate(R.id.action_quizMenuFragment_to_FirstFragment);
             }
         });
     }

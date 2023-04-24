@@ -20,12 +20,14 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
+        <item name="android:textColorPrimaryInverse">@color/white</item>
     </style>
 
     <style name="Theme.BuildingBlocksTeam1.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
 
 
 
