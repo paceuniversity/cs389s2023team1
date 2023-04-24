@@ -1,5 +1,6 @@
 package com.example.buildingblocksteam1.FirebaseSignup;
 
+import android.app.ActionBar;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,9 +13,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.buildingblocksteam1.FirebaseLogin.FirebaseLoginFragment;
 import com.example.buildingblocksteam1.R;
 import com.example.buildingblocksteam1.databinding.FragmentFirebaseSignupBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -43,14 +46,14 @@ public class FirebaseSignupFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mBinding = FragmentFirebaseSignupBinding.inflate(inflater, container, false);
+
         return mBinding.getRoot();
+
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        final TextView loginText = mBinding.moveToLogin;
 
         // Buttons
 
@@ -63,21 +66,23 @@ public class FirebaseSignupFragment extends Fragment {
             }
         });
 
-        mBinding.verifyEmailButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sendEmailVerification();
-            }
-        });
 
-
-        loginText.setOnClickListener(new View.OnClickListener() {
+        mBinding.moveToLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(FirebaseSignupFragment.this)
                         .navigate(R.id.action_signup_to_login);
             }
         });
+
+        mBinding.backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(FirebaseSignupFragment.this)
+                        .navigate(R.id.action_reload_to_FirstFragment);
+            }
+        });
+
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
@@ -122,10 +127,9 @@ public class FirebaseSignupFragment extends Fragment {
                 });
     }
 
+    //TODO EMAIL VERIFICATION
+    /*
     private void sendEmailVerification() {
-        // Disable button
-        mBinding.verifyEmailButton.setEnabled(false);
-
         // Send verification email
         final FirebaseUser user = mAuth.getCurrentUser();
         user.sendEmailVerification()
@@ -149,7 +153,7 @@ public class FirebaseSignupFragment extends Fragment {
                     }
                 });
     }
-
+*/
     private void reload() {
         mAuth.getCurrentUser().reload().addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override

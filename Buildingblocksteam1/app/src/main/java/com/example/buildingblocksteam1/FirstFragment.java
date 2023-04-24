@@ -36,12 +36,13 @@ public class FirstFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
 
-
-
-
-
-
-
+        binding.dailyQuizButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(FirstFragment.this)
+                        .navigate(R.id.action_FirstFragment_to_quizMenuFragment);
+            }
+        });
 
 
         binding.buttonLogin.setOnClickListener(new View.OnClickListener() {
