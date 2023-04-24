@@ -11,5 +11,8 @@
     <color name="figma_gray">#FFD9D9D9</color>
     <color name="figma_black">#FF1E1E1E</color>
     <color name="figma_lime_green">#FFADFC92</color>
+    <color name="button_text">#FF000000</color>
+    <color name="regular_text">#FFFFFFFF</color>
+
 
 </resources>

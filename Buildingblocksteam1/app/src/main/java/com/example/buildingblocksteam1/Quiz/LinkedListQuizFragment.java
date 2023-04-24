@@ -1,4 +1,4 @@
-package com.example.buildingblocksteam1;
+package com.example.buildingblocksteam1.Quiz;
 
 import android.os.Bundle;
 
@@ -15,6 +15,8 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.example.buildingblocksteam1.R;
+import com.example.buildingblocksteam1.SharedViewModel;
 import com.example.buildingblocksteam1.databinding.FragmentLinkedListQuizBinding;
 import com.example.buildingblocksteam1.databinding.FragmentQuizMenuBinding;
 
@@ -118,6 +120,15 @@ public class LinkedListQuizFragment extends Fragment {
 
                 NavHostFragment.findNavController(LinkedListQuizFragment.this)
                         .navigate(R.id.action_linkedListQuizFragment_to_linkedListQuizResultFragment);
+            }
+        });
+
+        binding.backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(LinkedListQuizFragment.this)
+                        .navigate(R.id.action_linkedListQuizFragment_to_quizMenuFragment);
             }
         });
     }
