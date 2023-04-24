@@ -60,7 +60,7 @@
     </fragment>
     <fragment
         android:id="@+id/quizMenuFragment"
-        android:name="com.example.buildingblocksteam1.QuizMenuFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.QuizMenuFragment"
         android:label="fragment_quiz_menu"
         tools:layout="@layout/fragment_quiz_menu" >
         <action
@@ -69,19 +69,25 @@
         <action
             android:id="@+id/action_quizMenuFragment_to_quizScoresFragment"
             app:destination="@id/quizScoresFragment" />
+        <action
+            android:id="@+id/action_quizMenuFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
     </fragment>
     <fragment
         android:id="@+id/linkedListQuizFragment"
-        android:name="com.example.buildingblocksteam1.LinkedListQuizFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.LinkedListQuizFragment"
         android:label="fragment_linked_list_quiz"
         tools:layout="@layout/fragment_linked_list_quiz" >
         <action
             android:id="@+id/action_linkedListQuizFragment_to_linkedListQuizResultFragment"
             app:destination="@id/linkedListQuizResultFragment" />
+        <action
+            android:id="@+id/action_linkedListQuizFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
     </fragment>
     <fragment
         android:id="@+id/linkedListQuizResultFragment"
-        android:name="com.example.buildingblocksteam1.LinkedListQuizResultFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.LinkedListQuizResultFragment"
         android:label="fragment_linked_list_quiz_result"
         tools:layout="@layout/fragment_linked_list_quiz_result" >
         <action
@@ -90,14 +96,22 @@
     </fragment>
     <fragment
         android:id="@+id/feedbackLinkedlistFragment"
-        android:name="com.example.buildingblocksteam1.FeedbackLinkedlistFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.FeedbackLinkedlistFragment"
         android:label="fragment_feedback_linkedlist"
-        tools:layout="@layout/fragment_feedback_linkedlist" />
+        tools:layout="@layout/fragment_feedback_linkedlist" >
+        <action
+            android:id="@+id/action_feedbackLinkedlistFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
     <fragment
         android:id="@+id/quizScoresFragment"
-        android:name="com.example.buildingblocksteam1.QuizScoresFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.QuizScoresFragment"
         android:label="fragment_quiz_scores"
-        tools:layout="@layout/fragment_quiz_scores" />
+        tools:layout="@layout/fragment_quiz_scores" >
+        <action
+            android:id="@+id/action_quizScoresFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
     <fragment
         android:id="@+id/lessonsFragment2"
         android:name="com.example.buildingblocksteam1.LessonsFragment"
