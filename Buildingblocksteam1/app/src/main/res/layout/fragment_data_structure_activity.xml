@@ -14,8 +14,6 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:background="@color/black"
         >
-
-
         <Button
             android:id="@+id/button8"
             android:layout_width="408dp"
