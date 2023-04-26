@@ -63,6 +63,7 @@ public class FirebaseSignupFragment extends Fragment {
                 String email = mBinding.fieldEmail.getText().toString();
                 String password = mBinding.fieldPassword.getText().toString();
                 createAccount(email, password);
+
             }
         });
 
@@ -113,6 +114,13 @@ public class FirebaseSignupFragment extends Fragment {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            if (user != null){
+                                sendEmailVerification();
+                                Log.d(TAG, "email verification was sent to " + email);
+                            }
+                            else {
+                                Log.d(TAG, "email verification was not sent to " + email);
+                            }
                             reload();
 
                         } else {
@@ -127,8 +135,6 @@ public class FirebaseSignupFragment extends Fragment {
                 });
     }
 
-    //TODO EMAIL VERIFICATION
-    /*
     private void sendEmailVerification() {
         // Send verification email
         final FirebaseUser user = mAuth.getCurrentUser();
@@ -137,7 +143,7 @@ public class FirebaseSignupFragment extends Fragment {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         // Re-enable button
-                        mBinding.verifyEmailButton.setEnabled(true);
+
 
                         if (task.isSuccessful()) {
                             Toast.makeText(getContext(),
@@ -153,7 +159,7 @@ public class FirebaseSignupFragment extends Fragment {
                     }
                 });
     }
-*/
+
     private void reload() {
         mAuth.getCurrentUser().reload().addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
