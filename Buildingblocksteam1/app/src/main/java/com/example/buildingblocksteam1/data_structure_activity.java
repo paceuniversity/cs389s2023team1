@@ -77,7 +77,7 @@ public class data_structure_activity extends Fragment {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController( data_structure_activity.this)
-                        .navigate( R.id.action_lessonsFragment2_to_algorithmsTopicsFragment2);
+                        .navigate( R.id.action_data_structure_activity2_to_lessonsFragment2);
             }
         });
 

@@ -80,7 +80,21 @@ public class LessonsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController( LessonsFragment.this)
-                        .navigate( R.id.action_FirstFragment_to_lessonsFragment2);
+                        .navigate( R.id.action_lessonsFragment2_to_FirstFragment);
+            }
+        });
+        binding.dataStructuresButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController( LessonsFragment.this)
+                        .navigate( R.id.action_lessonsFragment2_to_data_structure_activity2);
+            }
+        });
+        binding.algorithmsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController( LessonsFragment.this)
+                        .navigate( R.id.action_lessonsFragment2_to_algorithmsTopicsFragment2);
             }
         });
 

@@ -123,12 +123,19 @@
         <action
             android:id="@+id/action_lessonsFragment2_to_data_structure_activity2"
             app:destination="@id/data_structure_activity2" />
+        <action
+            android:id="@+id/action_lessonsFragment2_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
     </fragment>
     <fragment
         android:id="@+id/lecture_activity2"
         android:name="com.example.buildingblocksteam1.Lecture_activity"
         android:label="fragment_lecture_activity"
-        tools:layout="@layout/fragment_lecture_activity" />
+        tools:layout="@layout/fragment_lecture_activity" >
+        <action
+            android:id="@+id/action_lecture_activity2_to_algorithmsTopicsFragment2"
+            app:destination="@id/algorithmsTopicsFragment2" />
+    </fragment>
     <fragment
         android:id="@+id/algorithmsTopicsFragment2"
         android:name="com.example.buildingblocksteam1.AlgorithmsTopicsFragment"
@@ -137,10 +144,17 @@
         <action
             android:id="@+id/action_algorithmsTopicsFragment2_to_lecture_activity2"
             app:destination="@id/lecture_activity2" />
+        <action
+            android:id="@+id/action_algorithmsTopicsFragment2_to_lessonsFragment2"
+            app:destination="@id/lessonsFragment2" />
     </fragment>
     <fragment
         android:id="@+id/data_structure_activity2"
         android:name="com.example.buildingblocksteam1.data_structure_activity"
         android:label="fragment_data_structure_activity"
-        tools:layout="@layout/fragment_data_structure_activity" />
+        tools:layout="@layout/fragment_data_structure_activity" >
+        <action
+            android:id="@+id/action_data_structure_activity2_to_lessonsFragment2"
+            app:destination="@id/lessonsFragment2" />
+    </fragment>
 </navigation>
