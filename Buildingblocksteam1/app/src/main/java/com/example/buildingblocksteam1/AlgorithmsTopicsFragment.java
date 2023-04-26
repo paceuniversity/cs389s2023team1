@@ -77,9 +77,17 @@ public class AlgorithmsTopicsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController( AlgorithmsTopicsFragment.this)
-                        .navigate( R.id.action_lessonsFragment2_to_algorithmsTopicsFragment2);
+                        .navigate( R.id.action_algorithmsTopicsFragment2_to_lessonsFragment2);
             }
         });
+        binding.sortingalgo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController( AlgorithmsTopicsFragment.this)
+                        .navigate( R.id.action_algorithmsTopicsFragment2_to_lecture_activity2);
+            }
+        });
+
 
     }
 
