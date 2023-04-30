@@ -1,6 +1,7 @@
 package com.example.buildingblocksteam1;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,14 +12,21 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.buildingblocksteam1.databinding.FragmentFirstBinding;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 public class FirstFragment extends Fragment {
 
+    private static final String TAG = "FirstFragment";
     private FragmentFirstBinding binding;
 
     private FirebaseAuth mAuth;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
     public View onCreateView(
@@ -84,7 +92,7 @@ public class FirstFragment extends Fragment {
         SigninOrSignout();
     }
 
-    public void SigninOrSignout(){
+    private void SigninOrSignout(){
         if (mAuth.getCurrentUser() != null){
             binding.buttonSignup.setText("Sign Out");
             binding.buttonSignup.invalidate();
@@ -92,6 +100,31 @@ public class FirstFragment extends Fragment {
         else{
             binding.buttonSignup.setText("Sign In");
             binding.buttonSignup.invalidate();
+        }
+    }
+
+    //Gets Username from the user
+    //data is in document.getData() in the for loop log message
+
+    private void grabUsername(){
+        if (mAuth.getCurrentUser() != null) {
+            String email = mAuth.getCurrentUser().getEmail();
+            db.collection("UserInformation")
+                    .whereEqualTo("Email", email)
+                    .get()
+                    .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                            if (task.isSuccessful()) {
+                                for (QueryDocumentSnapshot document : task.getResult()) {
+                                    Log.d(TAG, document.getId() + " => " + document.getData());
+                                }
+                            } else {
+                                Log.d(TAG, "Error getting documents: ", task.getException());
+                            }
+                        }
+                    });
+
         }
     }
     @Override

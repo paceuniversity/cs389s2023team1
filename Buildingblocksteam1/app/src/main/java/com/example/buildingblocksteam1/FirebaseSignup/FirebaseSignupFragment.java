@@ -21,12 +21,19 @@ import com.example.buildingblocksteam1.FirebaseLogin.FirebaseLoginFragment;
 import com.example.buildingblocksteam1.R;
 import com.example.buildingblocksteam1.databinding.FragmentFirebaseSignupBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthMultiFactorException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.MultiFactorResolver;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.SetOptions;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 /**
@@ -38,6 +45,8 @@ public class FirebaseSignupFragment extends Fragment {
     private static final String TAG = "FirebaseSignupFragment";
 
     private FragmentFirebaseSignupBinding mBinding;
+
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     private FirebaseAuth mAuth;
 
@@ -62,7 +71,8 @@ public class FirebaseSignupFragment extends Fragment {
             public void onClick(View v) {
                 String email = mBinding.fieldEmail.getText().toString();
                 String password = mBinding.fieldPassword.getText().toString();
-                createAccount(email, password);
+                String username = mBinding.signupUsername.getText().toString();
+                createAccount(email, password, username);
 
             }
         });
@@ -99,13 +109,11 @@ public class FirebaseSignupFragment extends Fragment {
         }
     }
 
-    private void createAccount(String email, String password) {
+    private void createAccount(String email, String password, String username) {
         Log.d(TAG, "createAccount:" + email);
         if (!validateForm()) {
             return;
         }
-
-
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(requireActivity(), new OnCompleteListener<AuthResult>() {
                     @Override
@@ -115,6 +123,7 @@ public class FirebaseSignupFragment extends Fragment {
                             Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             if (user != null){
+                                updateDB(email, username);
                                 sendEmailVerification();
                                 Log.d(TAG, "email verification was sent to " + email);
                             }
@@ -232,6 +241,12 @@ public class FirebaseSignupFragment extends Fragment {
         return valid;
     }
 
+    private void updateDB(String email, String username) {
+        Map<String, Object> info = new HashMap<>();
+        info.put("Email", email);
+        info.put("username", username);
+        db.collection("UserInformation").add(info);
+    }
 
     //CHECKS FOR MULTIFACTOR
     /*
