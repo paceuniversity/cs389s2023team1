@@ -156,5 +156,17 @@
         <action
             android:id="@+id/action_data_structure_activity2_to_lessonsFragment2"
             app:destination="@id/lessonsFragment2" />
+        <action
+            android:id="@+id/action_data_structure_activity2_to_linkedListLectureFragment"
+            app:destination="@id/linkedListLectureFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/linkedListLectureFragment"
+        android:name="com.example.buildingblocksteam1.LinkedListLectureFragment"
+        android:label="fragment_linked_list_lecture"
+        tools:layout="@layout/fragment_linked_list_lecture" >
+        <action
+            android:id="@+id/action_linkedListLectureFragment_to_data_structure_activity2"
+            app:destination="@id/data_structure_activity2" />
     </fragment>
 </navigation>

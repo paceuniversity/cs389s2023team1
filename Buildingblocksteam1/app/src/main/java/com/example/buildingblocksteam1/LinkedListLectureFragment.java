@@ -9,16 +9,15 @@ import androidx.navigation.fragment.NavHostFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.example.buildingblocksteam1.databinding.FragmentDataStructureActivityBinding;
-import com.example.buildingblocksteam1.databinding.FragmentLessonsBinding;
+import com.example.buildingblocksteam1.databinding.FragmentLinkedListLectureBinding;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link data_structure_activity#newInstance} factory method to
+ * Use the {@link LinkedListLectureFragment#newInstance} factory method to
  * create an instance of this fragment.
+ *
  */
-public class data_structure_activity extends Fragment {
+public class LinkedListLectureFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,12 +27,7 @@ public class data_structure_activity extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
-    private FragmentDataStructureActivityBinding binding;
-
-    public data_structure_activity() {
-        // Required empty public constructor
-    }
+    private FragmentLinkedListLectureBinding binding;
 
     /**
      * Use this factory method to create a new instance of
@@ -41,16 +35,20 @@ public class data_structure_activity extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment data_structure_activity.
+     * @return A new instance of fragment LinkedListLectureFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static data_structure_activity newInstance(String param1, String param2) {
-        data_structure_activity fragment = new data_structure_activity();
+    public static LinkedListLectureFragment newInstance(String param1, String param2) {
+        LinkedListLectureFragment fragment = new LinkedListLectureFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
+    }
+
+    public LinkedListLectureFragment() {
+        // Required empty public constructor
     }
 
     @Override
@@ -66,7 +64,7 @@ public class data_structure_activity extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        binding = FragmentDataStructureActivityBinding.inflate(inflater,container,false);
+        binding = FragmentLinkedListLectureBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
@@ -76,18 +74,11 @@ public class data_structure_activity extends Fragment {
         binding.backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController( data_structure_activity.this)
-                        .navigate( R.id.action_data_structure_activity2_to_lessonsFragment2);
+                NavHostFragment.findNavController(LinkedListLectureFragment.this)
+                        .navigate(R.id.action_linkedListLectureFragment_to_data_structure_activity2);
             }
         });
 
-        binding.LinkedListButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavHostFragment.findNavController( data_structure_activity.this)
-                        .navigate( R.id.action_data_structure_activity2_to_linkedListLectureFragment);
-            }
-        });
 
     }
 }
