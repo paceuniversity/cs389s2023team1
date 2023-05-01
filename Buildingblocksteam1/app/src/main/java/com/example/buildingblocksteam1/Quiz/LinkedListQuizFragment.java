@@ -13,6 +13,7 @@ import androidx.navigation.fragment.NavHostFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -97,25 +98,30 @@ public class LinkedListQuizFragment extends Fragment {
             }
         });
 
-        // *** Creates the list of questions
-        ArrayList<Question> questions = new ArrayList<Question>();
-        questions.add(new Question("What is a linked list?", "A data structure that stores elements in an array", "A data structure that stores elements in a tree", "A data structure that stores elements in a sequence of nodes", "A data structure that stores elements in a stack", "A data structure that stores elements in a sequence of nodes", "A linked list is a data structure that stores elements in a sequence of nodes. Each node contains data and a pointer to the next node in the list."));
-        questions.add(new Question("Which of the following is a disadvantage of using a circular linked list?", "Requires more memory for pointers", "More difficult to implement than a singly linked list", "More difficult to traverse than a doubly linked list", "May result in infinite loops if not implemented carefully", "May result in infinite loops if not implemented carefully", "A disadvantage of using a circular linked list is that it may result in infinite loops if not implemented carefully, since there is no natural endpoint in the list."));
-        questions.add(new Question("What is a doubly linked list?", "A linked list where each node has only one pointer to the next node", "A linked list where each node has two pointers, one to the previous node and one to the next node", "A linked list where each node has three pointers, one to the previous node, one to the next node, and one to a random node", "A linked list where each node has two data values, one representing the previous node and one representing the next node", "A linked list where each node has two pointers, one to the previous node and one to the next node", "A doubly linked list is a linked list where each node has two pointers, one to the previous node and one to the next node."));
-        questions.add(new Question("What is a linked list?", "A data structure that stores elements in an array", "A data structure that stores elements in a tree", "A data structure that stores elements in a sequence of nodes", "A data structure that stores elements in a stack", "A data structure that stores elements in a sequence of nodes", "A linked list is a data structure that stores elements in a sequence of nodes. Each node contains data and a pointer to the next node in the list."));
-        questions.add(new Question("Which of the following is a disadvantage of using a circular linked list?", "Requires more memory for pointers", "More difficult to implement than a singly linked list", "More difficult to traverse than a doubly linked list", "May result in infinite loops if not implemented carefully", "May result in infinite loops if not implemented carefully", "A disadvantage of using a circular linked list is that it may result in infinite loops if not implemented carefully, since there is no natural endpoint in the list."));
-        questions.add(new Question("What is a doubly linked list?", "A linked list where each node has only one pointer to the next node", "A linked list where each node has two pointers, one to the previous node and one to the next node", "A linked list where each node has three pointers, one to the previous node, one to the next node, and one to a random node", "A linked list where each node has two data values, one representing the previous node and one representing the next node", "A linked list where each node has two pointers, one to the previous node and one to the next node", "A doubly linked list is a linked list where each node has two pointers, one to the previous node and one to the next node."));
-        questions.add(new Question("What is a linked list?", "A data structure that stores elements in an array", "A data structure that stores elements in a tree", "A data structure that stores elements in a sequence of nodes", "A data structure that stores elements in a stack", "A data structure that stores elements in a sequence of nodes", "A linked list is a data structure that stores elements in a sequence of nodes. Each node contains data and a pointer to the next node in the list."));
-        questions.add(new Question("Which of the following is a disadvantage of using a circular linked list?", "Requires more memory for pointers", "More difficult to implement than a singly linked list", "More difficult to traverse than a doubly linked list", "May result in infinite loops if not implemented carefully", "May result in infinite loops if not implemented carefully", "A disadvantage of using a circular linked list is that it may result in infinite loops if not implemented carefully, since there is no natural endpoint in the list."));
-        questions.add(new Question("What is a doubly linked list?", "A linked list where each node has only one pointer to the next node", "A linked list where each node has two pointers, one to the previous node and one to the next node", "A linked list where each node has three pointers, one to the previous node, one to the next node, and one to a random node", "A linked list where each node has two data values, one representing the previous node and one representing the next node", "A linked list where each node has two pointers, one to the previous node and one to the next node", "A doubly linked list is a linked list where each node has two pointers, one to the previous node and one to the next node."));
-        questions.add(new Question("What is a linked list?", "A data structure that stores elements in an array", "A data structure that stores elements in a tree", "A data structure that stores elements in a sequence of nodes", "A data structure that stores elements in a stack", "A data structure that stores elements in a sequence of nodes", "A linked list is a data structure that stores elements in a sequence of nodes. Each node contains data and a pointer to the next node in the list."));
-        questions.add(new Question("Which of the following is a disadvantage of using a circular linked list?", "Requires more memory for pointers", "More difficult to implement than a singly linked list", "More difficult to traverse than a doubly linked list", "May result in infinite loops if not implemented carefully", "May result in infinite loops if not implemented carefully", "A disadvantage of using a circular linked list is that it may result in infinite loops if not implemented carefully, since there is no natural endpoint in the list."));
-        questions.add(new Question("What is a doubly linked list?", "A linked list where each node has only one pointer to the next node", "A linked list where each node has two pointers, one to the previous node and one to the next node", "A linked list where each node has three pointers, one to the previous node, one to the next node, and one to a random node", "A linked list where each node has two data values, one representing the previous node and one representing the next node", "A linked list where each node has two pointers, one to the previous node and one to the next node", "A doubly linked list is a linked list where each node has two pointers, one to the previous node and one to the next node."));
-
+        // *** Gets the resources
 
         Resources res = getResources();
         int regularColor = res.getColor(R.color.regular_text);
         int buttonColor = res.getColor(R.color.button_text);
+
+        // *** Creates the list of questions
+        ArrayList<Question> questions = new ArrayList<Question>();
+        questions.add(new Question("1", "A data structure that stores elements in an array", "A data structure that stores elements in a tree", "A data structure that stores elements in a sequence of nodes", "A data structure that stores elements in a stack", "A data structure that stores elements in a sequence of nodes", "A linked list is a data structure that stores elements in a sequence of nodes. Each node contains data and a pointer to the next node in the list."));
+        questions.add(new Question("2", "Requires more memory for pointers", "More difficult to implement than a singly linked list", "More difficult to traverse than a doubly linked list", "May result in infinite loops if not implemented carefully", "May result in infinite loops if not implemented carefully", "A disadvantage of using a circular linked list is that it may result in infinite loops if not implemented carefully, since there is no natural endpoint in the list."));
+        questions.add(new Question("3", "A linked list where each node has only one pointer to the next node", "A linked list where each node has two pointers, one to the previous node and one to the next node", "A linked list where each node has three pointers, one to the previous node, one to the next node, and one to a random node", "A linked list where each node has two data values, one representing the previous node and one representing the next node", "A linked list where each node has two pointers, one to the previous node and one to the next node", "A doubly linked list is a linked list where each node has two pointers, one to the previous node and one to the next node."));
+        questions.add(new Question("4", "A data structure that stores elements in an array", "A data structure that stores elements in a tree", "A data structure that stores elements in a sequence of nodes", "A data structure that stores elements in a stack", "A data structure that stores elements in a sequence of nodes", "A linked list is a data structure that stores elements in a sequence of nodes. Each node contains data and a pointer to the next node in the list."));
+        questions.add(new Question("5", "Requires more memory for pointers", "More difficult to implement than a singly linked list", "More difficult to traverse than a doubly linked list", "May result in infinite loops if not implemented carefully", "May result in infinite loops if not implemented carefully", "A disadvantage of using a circular linked list is that it may result in infinite loops if not implemented carefully, since there is no natural endpoint in the list."));
+        questions.add(new Question("6", "A linked list where each node has only one pointer to the next node", "A linked list where each node has two pointers, one to the previous node and one to the next node", "A linked list where each node has three pointers, one to the previous node, one to the next node, and one to a random node", "A linked list where each node has two data values, one representing the previous node and one representing the next node", "A linked list where each node has two pointers, one to the previous node and one to the next node", "A doubly linked list is a linked list where each node has two pointers, one to the previous node and one to the next node."));
+        questions.add(new Question("7", "A data structure that stores elements in an array", "A data structure that stores elements in a tree", "A data structure that stores elements in a sequence of nodes", "A data structure that stores elements in a stack", "A data structure that stores elements in a sequence of nodes", "A linked list is a data structure that stores elements in a sequence of nodes. Each node contains data and a pointer to the next node in the list."));
+        questions.add(new Question("8", "Requires more memory for pointers", "More difficult to implement than a singly linked list", "More difficult to traverse than a doubly linked list", "May result in infinite loops if not implemented carefully", "May result in infinite loops if not implemented carefully", "A disadvantage of using a circular linked list is that it may result in infinite loops if not implemented carefully, since there is no natural endpoint in the list."));
+        questions.add(new Question("9", "A linked list where each node has only one pointer to the next node", "A linked list where each node has two pointers, one to the previous node and one to the next node", "A linked list where each node has three pointers, one to the previous node, one to the next node, and one to a random node", "A linked list where each node has two data values, one representing the previous node and one representing the next node", "A linked list where each node has two pointers, one to the previous node and one to the next node", "A doubly linked list is a linked list where each node has two pointers, one to the previous node and one to the next node."));
+        questions.add(new Question("10", "A data structure that stores elements in an array", "A data structure that stores elements in a tree", "A data structure that stores elements in a sequence of nodes", "A data structure that stores elements in a stack", "A data structure that stores elements in a sequence of nodes", "A linked list is a data structure that stores elements in a sequence of nodes. Each node contains data and a pointer to the next node in the list."));
+        questions.add(new Question("11", "Requires more memory for pointers", "More difficult to implement than a singly linked list", "More difficult to traverse than a doubly linked list", "May result in infinite loops if not implemented carefully", "May result in infinite loops if not implemented carefully", "A disadvantage of using a circular linked list is that it may result in infinite loops if not implemented carefully, since there is no natural endpoint in the list."));
+        questions.add(new Question("12", "A linked list where each node has only one pointer to the next node", "A linked list where each node has two pointers, one to the previous node and one to the next node", "A linked list where each node has three pointers, one to the previous node, one to the next node, and one to a random node", "A linked list where each node has two data values, one representing the previous node and one representing the next node", "A linked list where each node has two pointers, one to the previous node and one to the next node", "A doubly linked list is a linked list where each node has two pointers, one to the previous node and one to the next node."));
+
+        // *** Shuffles the questions Array List
+        Collections.shuffle(questions, new Random());
+
 
         // *** Add the questions as radio buttons into the view
         LinearLayout root = binding.linearLayout;
@@ -127,23 +133,33 @@ public class LinkedListQuizFragment extends Fragment {
             root.addView(text);
 
             RadioGroup radioGroup = new RadioGroup(this.getContext());
-            root.addView(radioGroup);
 
 
             ArrayList<String> answers = questions.get(i).getAnswerList();
-            for (int j = 0; i < 4; i++) {
+            Collections.shuffle(answers, new Random());
+            for (int j = 0; j < 4; j++) {
                 RadioButton radioButton = new RadioButton(this.getContext());
-                radioButton.setText(answers.get(j));
+                radioButton.setText("" + (char)(j+65) + ". " + answers.get(j));
                 radioButton.setButtonTintList(ColorStateList.valueOf(regularColor));
                 radioButton.setTextColor(regularColor);
+                if (radioButton.getText().equals(questions.get(i).getAnswer())) {
+                    radioButton.setTag("true");
+                }
                 radioGroup.addView(radioButton);
             }
+
+            root.addView(radioGroup);
 
             usedQuestions.add(questions.get(i));
         }
         viewModel.setQuestions(usedQuestions);
 
-        //text.setText("This a test");
+//        Button buttonSubmit2 = new Button(this.getContext());
+//        buttonSubmit2.setTextColor(buttonColor);
+//        buttonSubmit2.setLayoutParams(new LinearLayout.LayoutParams(411, -2));
+//        root.addView(buttonSubmit2);
+
+
 
 
         return binding.getRoot();
