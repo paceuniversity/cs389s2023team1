@@ -80,7 +80,7 @@ public class FirstFragment extends Fragment {
                 } else {
                     mAuth.signOut();
                 }
-                SigninOrSignout();
+                SignupOrSignout();
             }
         });
         mAuth = FirebaseAuth.getInstance();
@@ -89,17 +89,17 @@ public class FirstFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        SigninOrSignout();
+        SignupOrSignout();
         notificationWithUsername();
     }
 
     //checks whether user is signed in or not and updates UI
-    private void SigninOrSignout() {
+    private void SignupOrSignout() {
         if (mAuth.getCurrentUser() != null) {
             binding.buttonSignup.setText("Sign Out");
             binding.buttonSignup.invalidate();
         } else {
-            binding.buttonSignup.setText("Sign In");
+            binding.buttonSignup.setText("Sign Up");
             binding.buttonSignup.invalidate();
         }
     }
