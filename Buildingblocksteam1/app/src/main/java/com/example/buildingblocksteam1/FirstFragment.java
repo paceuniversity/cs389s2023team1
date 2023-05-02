@@ -15,13 +15,9 @@ import com.example.buildingblocksteam1.databinding.FragmentFirstBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-
-import java.util.List;
-import java.util.Map;
 
 public class FirstFragment extends Fragment {
 
@@ -69,6 +65,13 @@ public class FirstFragment extends Fragment {
                         .navigate(R.id.action_FirstFragment_to_lessonsFragment2);
             }
         });
+        binding.Flashcards.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(FirstFragment.this)
+                        .navigate(R.id.action_FirstFragment_to_flashcardMenuFragment);
+            }
+        });
         binding.buttonSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -80,7 +83,7 @@ public class FirstFragment extends Fragment {
                 } else {
                     mAuth.signOut();
                 }
-                SigninOrSignout();
+                SignupOrSignout();
             }
         });
         mAuth = FirebaseAuth.getInstance();
@@ -89,17 +92,17 @@ public class FirstFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        SigninOrSignout();
+        SignupOrSignout();
         notificationWithUsername();
     }
 
     //checks whether user is signed in or not and updates UI
-    private void SigninOrSignout() {
+    private void SignupOrSignout() {
         if (mAuth.getCurrentUser() != null) {
             binding.buttonSignup.setText("Sign Out");
             binding.buttonSignup.invalidate();
         } else {
-            binding.buttonSignup.setText("Sign In");
+            binding.buttonSignup.setText("Sign Up");
             binding.buttonSignup.invalidate();
         }
     }
@@ -141,11 +144,10 @@ public class FirstFragment extends Fragment {
                             if (task.isSuccessful()) {
                                 for (QueryDocumentSnapshot document : task.getResult()) {
                                     name = document.getData().get("username").toString();
-                                    Log.d(TAG, "name => " + name);
-                                    NotificationHelper notifyHelp = new NotificationHelper(getContext());
+                                    Log.d(TAG, "name => " + name);NotificationHelper notifyHelp = new NotificationHelper(getContext());
                                     notifyHelp.createNotificationChannel();
                                     String content = "Hello " + name + "!";
-                                    NotificationCompat.Builder builder = notifyHelp.setNotificationContent("Reminder",content);
+                                    NotificationCompat.Builder builder = notifyHelp.setNotificationContent("Welcome!",content);
                                     notifyHelp.showNotification(1,builder);
                                 }
                             } else {

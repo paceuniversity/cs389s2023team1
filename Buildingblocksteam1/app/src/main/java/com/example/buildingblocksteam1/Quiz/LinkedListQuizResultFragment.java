@@ -78,11 +78,11 @@ public class LinkedListQuizResultFragment extends Fragment {
         viewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
 
         // Call a method on the SharedViewModel
-        viewModel.getData().observe(getViewLifecycleOwner(), new Observer<String>() {
+        viewModel.getLinkedListScore().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(String data) {
-                binding.linkedlistResult.setText((viewModel.getData().getValue() + "%"));
-                binding.seekBar.setProgress(Integer.parseInt(viewModel.getData().getValue()) / 10);
+                binding.linkedlistResult.setText((viewModel.getLinkedListScore().getValue() + "%"));
+                binding.seekBar.setProgress(Integer.parseInt(viewModel.getLinkedListScore().getValue()) / 10);
             }
         });
         return binding.getRoot();

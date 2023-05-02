@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/figma_black"
+tools:context=".Flashcard.FlashcardMenuFragment">
+
+<!-- TODO: Update blank fragment layout -->
+<TextView
+    android:id="@+id/article_heading"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_regular"
+    android:text="Flashcards Menu"
+    android:textAppearance=
+        "@android:style/TextAppearance.DeviceDefault.Large"
+    android:textColor="@color/figma_orange"
+    android:gravity="center"
+    android:textStyle="bold" />
+
+<ImageView
+    android:id="@+id/back_arrow"
+    android:layout_width="60dp"
+    android:layout_height="40dp"
+    android:clickable="true"
+    android:onClick="onClick"
+    android:src="@drawable/bg_removed_arrow"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:focusable="true" />
+
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/article_heading">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/button_linked_list"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/button_text"
+            android:text="LinkedList Flashcard"></Button>
+
+        <Button
+            android:id="@+id/button_stacks"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/button_text"
+            android:text="Stacks Flashcard"></Button>
+
+        <Button
+            android:id="@+id/button_queues"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/button_text"
+            android:text="Queues Flashcard"></Button>
+
+        <Button
+            android:id="@+id/button_trees"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/button_text"
+            android:text="Trees Flashcard"></Button>
+
+        <Button
+            android:id="@+id/button_graphs"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/button_text"
+            android:text="Graphs Flashcard"></Button>
+
+        <Button
+            android:id="@+id/button_hash_tables"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/button_text"
+            android:text="Hash Tables Flashcard"></Button>
+
+        <Button
+            android:id="@+id/button_sets_maps"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/button_text"
+            android:text="Sets and Maps Flashcard"></Button>
+        <Button
+            android:id="@+id/button_heaps"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/button_text"
+            android:text="Heaps Flashcard"></Button>
+
+        <Button
+            android:id="@+id/button_sorting"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/button_text"
+            android:text="Sorting Algorithms Flashcard"></Button>
+
+        <Button
+            android:id="@+id/button_searching"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/button_text"
+            android:text="Searching Algorithms Flashcard"></Button>
+
+        <Button
+            android:id="@+id/button_greedy"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/button_text"
+            android:text="Greedy Algorithms Flashcard"></Button>
+
+        <Button
+            android:id="@+id/button_divide_conquer"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/button_text"
+            android:text="Divide and Conquer Flashcard"></Button>
+
+        <Button
+            android:id="@+id/button_dynamic_programming"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/button_text"
+            android:text="Dynamic Programming Flashcard"></Button>
+
+        <Button
+            android:id="@+id/button_backtracing"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/button_text"
+            android:text="Backtracing Flashcard"></Button>
+
+        <Button
+            android:id="@+id/button_brute_force"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/button_text"
+            android:text="Brute Force Flashcard"></Button>
+
+        <Button
+            android:id="@+id/button_randomized"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/button_text"
+            android:text="Randomized Flashcard"></Button>
+
+        <Button
+            android:id="@+id/button_string_matching"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/button_text"
+            android:text="String Matching Flashcard"></Button>
+
+    </LinearLayout>
+
+
+
+</ScrollView>
+
+</RelativeLayout>
