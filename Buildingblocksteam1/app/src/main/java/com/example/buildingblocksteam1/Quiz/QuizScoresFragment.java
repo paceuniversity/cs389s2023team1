@@ -79,7 +79,7 @@ public class QuizScoresFragment extends Fragment {
         viewModel.getData().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(String data) {
-                binding.buttonLinkedList2.setText(("LinkedList Quiz Score: " + viewModel.getData().getValue() + "%"));
+                binding.buttonLinkedList.setText(("LinkedList Quiz Score: " + viewModel.getData().getValue() + "%"));
             }
         });
 

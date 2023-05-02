@@ -81,7 +81,7 @@ public class FlashcardMenuFragment extends Fragment {
             public void onClick(View view) {
 
                 NavHostFragment.findNavController(FlashcardMenuFragment.this)
-                        .navigate(R.id.action_quizMenuFragment_to_linkedListQuizFragment);
+                        .navigate(R.id.action_flashcardMenuFragment_to_linkedListFlashcardFragment);
             }
         });
 

@@ -13,7 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/padding_regular"
-            android:text="Linked List Flashcard"
+            android:text="Linked List Flashcards"
             android:textAppearance=
                 "@android:style/TextAppearance.DeviceDefault.Large"
             android:textColor="@color/figma_orange"
@@ -38,6 +38,7 @@
         android:translationY="125dp">
 
         <LinearLayout
+            android:id="@+id/linear_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"

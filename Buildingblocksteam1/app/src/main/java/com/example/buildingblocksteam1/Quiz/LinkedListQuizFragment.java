@@ -153,16 +153,8 @@ public class LinkedListQuizFragment extends Fragment {
         }
         viewModel.setQuestions(usedQuestions);
 
-//        Button buttonSubmit2 = new Button(this.getContext());
-//        buttonSubmit2.setTextColor(buttonColor);
-//        buttonSubmit2.setLayoutParams(new LinearLayout.LayoutParams(411, -2));
-//        root.addView(buttonSubmit2);
-
-
-
 
         return binding.getRoot();
-        //return inflater.inflate(R.layout.fragment_quiz_menu, container, false);
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
