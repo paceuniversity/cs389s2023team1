@@ -162,6 +162,27 @@
         <action
             android:id="@+id/action_data_structure_activity2_to_linkedListLectureFragment"
             app:destination="@id/linkedListLectureFragment" />
+        <action
+            android:id="@+id/action_data_structure_activity2_to_stacksLectureFragment"
+            app:destination="@id/stacksLectureFragment" />
+        <action
+            android:id="@+id/action_data_structure_activity2_to_queuesLectureFragment"
+            app:destination="@id/queuesLectureFragment" />
+        <action
+            android:id="@+id/action_data_structure_activity2_to_treesLectureFragment"
+            app:destination="@id/treesLectureFragment" />
+        <action
+            android:id="@+id/action_data_structure_activity2_to_graphsLectureFragment"
+            app:destination="@id/graphsLectureFragment" />
+        <action
+            android:id="@+id/action_data_structure_activity2_to_hashTablesFragment"
+            app:destination="@id/hashTablesFragment" />
+        <action
+            android:id="@+id/action_data_structure_activity2_to_hashTablesFragment2"
+            app:destination="@id/hashTablesFragment" />
+        <action
+            android:id="@+id/action_data_structure_activity2_to_heapsLectureFragment"
+            app:destination="@id/heapsLectureFragment" />
     </fragment>
     <fragment
         android:id="@+id/linkedListLectureFragment"
@@ -192,5 +213,59 @@
         <action
             android:id="@+id/action_linkedListFlashcardFragment_to_flashcardMenuFragment"
             app:destination="@id/flashcardMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stacksLectureFragment"
+        android:name="com.example.buildingblocksteam1.StacksLectureFragment"
+        android:label="fragment_stacks_lecture"
+        tools:layout="@layout/fragment_stacks_lecture" >
+        <action
+            android:id="@+id/action_stacksLectureFragment_to_data_structure_activity2"
+            app:destination="@id/data_structure_activity2" />
+    </fragment>
+    <fragment
+        android:id="@+id/queuesLectureFragment"
+        android:name="com.example.buildingblocksteam1.QueuesLectureFragment"
+        android:label="fragment_queues_lecture"
+        tools:layout="@layout/fragment_queues_lecture" >
+        <action
+            android:id="@+id/action_queuesLectureFragment_to_data_structure_activity2"
+            app:destination="@id/data_structure_activity2" />
+    </fragment>
+    <fragment
+        android:id="@+id/treesLectureFragment"
+        android:name="com.example.buildingblocksteam1.TreesLectureFragment"
+        android:label="fragment_trees_lecture"
+        tools:layout="@layout/fragment_trees_lecture" >
+        <action
+            android:id="@+id/action_treesLectureFragment_to_data_structure_activity2"
+            app:destination="@id/data_structure_activity2" />
+    </fragment>
+    <fragment
+        android:id="@+id/graphsLectureFragment"
+        android:name="com.example.buildingblocksteam1.GraphsLectureFragment"
+        android:label="fragment_graphs_lecture"
+        tools:layout="@layout/fragment_graphs_lecture" >
+        <action
+            android:id="@+id/action_graphsLectureFragment_to_data_structure_activity2"
+            app:destination="@id/data_structure_activity2" />
+    </fragment>
+    <fragment
+        android:id="@+id/hashTablesFragment"
+        android:name="com.example.buildingblocksteam1.HashTablesFragment"
+        android:label="fragment_hash_tables"
+        tools:layout="@layout/fragment_hash_tables" >
+        <action
+            android:id="@+id/action_hashTablesFragment_to_data_structure_activity2"
+            app:destination="@id/data_structure_activity2" />
+    </fragment>
+    <fragment
+        android:id="@+id/heapsLectureFragment"
+        android:name="com.example.buildingblocksteam1.HeapsLectureFragment"
+        android:label="fragment_heaps_lecture"
+        tools:layout="@layout/fragment_heaps_lecture" >
+        <action
+            android:id="@+id/action_heapsLectureFragment_to_data_structure_activity2"
+            app:destination="@id/data_structure_activity2" />
     </fragment>
 </navigation>

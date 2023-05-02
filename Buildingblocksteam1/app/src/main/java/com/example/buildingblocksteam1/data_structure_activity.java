@@ -89,5 +89,50 @@ public class data_structure_activity extends Fragment {
             }
         });
 
+        binding.stacksDs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController( data_structure_activity.this)
+                        .navigate( R.id.action_data_structure_activity2_to_stacksLectureFragment);
+            }
+        });
+
+        binding.queuesBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController( data_structure_activity.this)
+                        .navigate( R.id.action_data_structure_activity2_to_queuesLectureFragment);
+            }
+        });
+        binding.heapsBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController( data_structure_activity.this)
+                        .navigate( R.id.action_data_structure_activity2_to_heapsLectureFragment);
+            }
+        });
+        binding.hashTablesBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController( data_structure_activity.this)
+                        .navigate( R.id.action_data_structure_activity2_to_hashTablesFragment);
+            }
+        });
+
+        binding.graphsBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController( data_structure_activity.this)
+                        .navigate( R.id.action_data_structure_activity2_to_graphsLectureFragment);
+            }
+        });
+        binding.treesBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController( data_structure_activity.this)
+                        .navigate( R.id.action_data_structure_activity2_to_treesLectureFragment);
+            }
+        });
+
     }
 }
