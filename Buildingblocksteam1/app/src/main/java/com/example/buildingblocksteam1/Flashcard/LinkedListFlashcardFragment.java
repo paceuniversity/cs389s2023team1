@@ -1,4 +1,4 @@
-package com.example.buildingblocksteam1;
+package com.example.buildingblocksteam1.Flashcard;
 
 import android.os.Bundle;
 
@@ -10,17 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import com.example.buildingblocksteam1.Flashcard.Flashcards;
-import com.example.buildingblocksteam1.Quiz.LinkedListQuizFragment;
-import com.example.buildingblocksteam1.databinding.FragmentFlashcardMenuBinding;
+import com.example.buildingblocksteam1.R;
 import com.example.buildingblocksteam1.databinding.FragmentLinkedListFlashcardBinding;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 

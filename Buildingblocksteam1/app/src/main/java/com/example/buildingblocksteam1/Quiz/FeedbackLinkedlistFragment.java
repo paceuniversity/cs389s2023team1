@@ -1,18 +1,34 @@
 package com.example.buildingblocksteam1.Quiz;
 
+import android.content.res.ColorStateList;
+import android.content.res.Resources;
+import android.graphics.Typeface;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 
+import com.example.buildingblocksteam1.Question;
 import com.example.buildingblocksteam1.R;
+import com.example.buildingblocksteam1.SharedViewModel;
 import com.example.buildingblocksteam1.databinding.FragmentFeedbackLinkedlistBinding;
 import com.example.buildingblocksteam1.databinding.FragmentQuizMenuBinding;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -31,6 +47,7 @@ public class FeedbackLinkedlistFragment extends Fragment {
     private String mParam2;
 
     private FragmentFeedbackLinkedlistBinding binding;
+    private SharedViewModel viewModel;
 
     public FeedbackLinkedlistFragment() {
         // Required empty public constructor
@@ -61,6 +78,8 @@ public class FeedbackLinkedlistFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+        viewModel = new ViewModelProvider(this).get(SharedViewModel.class);
     }
 
     @Override
@@ -69,6 +88,64 @@ public class FeedbackLinkedlistFragment extends Fragment {
         // Inflate the layout for this fragment
         binding = FragmentFeedbackLinkedlistBinding.inflate(inflater, container, false);
 
+        viewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
+
+        // Call a method on the SharedViewModel
+        viewModel.getLinkedListScore().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String data) {
+                // Update UI with the new data
+            }
+        });
+        // *** Gets the resources
+
+        Resources res = getResources();
+        int regularColor = res.getColor(R.color.regular_text);
+        int buttonColor = res.getColor(R.color.button_text);
+
+
+        // *** Add the questions as radio buttons into the view
+        LinearLayout root = binding.linearLayout;
+        ArrayList<Question> questions = viewModel.getLinkedListQuestions().getValue();
+        for (int i = 0; i < 10; i++) {
+            TextView text = new TextView(this.getContext());
+            text.setText("" + (i+1) + ". " + questions.get(i).getQuestion());
+            text.setTextColor(regularColor);
+            root.addView(text);
+
+            RadioGroup radioGroup = new RadioGroup(this.getContext());
+
+
+            ArrayList<String> answers = questions.get(i).getAnswerList();
+            RadioButton temp = null;
+            for (int j = 0; j < 4; j++) {
+                RadioButton radioButton = new RadioButton(this.getContext());
+                radioButton.setText(answers.get(j));
+                radioButton.setButtonTintList(ColorStateList.valueOf(regularColor));
+                radioButton.setTextColor(regularColor);
+                if (radioButton.getText().equals(questions.get(i).getAnswer())) {
+                    radioButton.setTag("true");
+                    radioButton.setSelected(true);
+                    radioButton.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+                    temp = radioButton;
+                }
+                radioButton.setText("" + (char)(j+65) + ". " + answers.get(j));
+                radioGroup.addView(radioButton);
+            }
+
+            root.addView(radioGroup);
+
+            TextView feedback = new TextView(getContext());
+            feedback.setText("Answer: " + temp.getText() + "\nFeedback: " + questions.get(i).getFeedback());
+            feedback.setTextColor(regularColor);
+            root.addView(feedback);
+
+        }
+
+        Button submit = binding.buttonSubmit;
+        root.removeView(submit);
+        root.addView(submit);
+
         return binding.getRoot();
         //return inflater.inflate(R.layout.fragment_feedback_linkedlist, container, false);
     }
@@ -76,6 +153,14 @@ public class FeedbackLinkedlistFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         binding.backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(FeedbackLinkedlistFragment.this)
+                        .navigate(R.id.action_feedbackLinkedlistFragment_to_quizMenuFragment);
+            }
+        });
+        binding.buttonSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 

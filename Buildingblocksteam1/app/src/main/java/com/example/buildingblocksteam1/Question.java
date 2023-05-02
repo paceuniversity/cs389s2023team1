@@ -17,8 +17,23 @@ public class Question {
         answerList.add(answer2);
         answerList.add(answer3);
         answerList.add(answer4);
-        this.answer = answer;
+        String tempAnswer = answer;
         this.feedback = feedback;
+
+        switch (tempAnswer) {
+            case "A":
+                this.answer = answer1;
+                break;
+            case "B":
+                this.answer = answer2;
+                break;
+            case "C":
+                this.answer = answer3;
+                break;
+            case "D":
+                this.answer = answer4;
+                break;
+        }
     }
 
     public String getQuestion() {
