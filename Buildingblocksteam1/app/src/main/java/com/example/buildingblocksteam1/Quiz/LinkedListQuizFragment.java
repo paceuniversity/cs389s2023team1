@@ -91,7 +91,7 @@ public class LinkedListQuizFragment extends Fragment {
         viewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
 
         // Call a method on the SharedViewModel
-        viewModel.getData().observe(getViewLifecycleOwner(), new Observer<String>() {
+        viewModel.getLinkedListScore().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(String data) {
                 // Update UI with the new data
@@ -138,12 +138,13 @@ public class LinkedListQuizFragment extends Fragment {
             Collections.shuffle(answers, new Random());
             for (int j = 0; j < 4; j++) {
                 RadioButton radioButton = new RadioButton(this.getContext());
-                radioButton.setText("" + (char)(j+65) + ". " + answers.get(j));
+                radioButton.setText(answers.get(j));
                 radioButton.setButtonTintList(ColorStateList.valueOf(regularColor));
                 radioButton.setTextColor(regularColor);
                 if (radioButton.getText().equals(questions.get(i).getAnswer())) {
                     radioButton.setTag("true");
                 }
+                radioButton.setText("" + (char)(j+65) + ". " + answers.get(j));
                 radioGroup.addView(radioButton);
             }
 
@@ -151,7 +152,10 @@ public class LinkedListQuizFragment extends Fragment {
 
             usedQuestions.add(questions.get(i));
         }
-        viewModel.setQuestions(usedQuestions);
+        Button submit = binding.buttonSubmit;
+        root.removeView(submit);
+        root.addView(submit);
+        viewModel.setLinkedListQuestions(usedQuestions);
 
 
         return binding.getRoot();

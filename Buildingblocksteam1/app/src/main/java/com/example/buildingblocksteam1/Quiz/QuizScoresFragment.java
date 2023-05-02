@@ -76,10 +76,10 @@ public class QuizScoresFragment extends Fragment {
         viewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
 
         // Call a method on the SharedViewModel
-        viewModel.getData().observe(getViewLifecycleOwner(), new Observer<String>() {
+        viewModel.getLinkedListScore().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(String data) {
-                binding.buttonLinkedList.setText(("LinkedList Quiz Score: " + viewModel.getData().getValue() + "%"));
+                binding.buttonLinkedList.setText(("LinkedList Quiz Score: " + viewModel.getLinkedListScore().getValue() + "%"));
             }
         });
 
