@@ -23,6 +23,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_lessonsFragment2"
             app:destination="@id/lessonsFragment2" />
+        <action
+            android:id="@+id/action_FirstFragment_to_flashcardMenuFragment"
+            app:destination="@id/flashcardMenuFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -156,5 +159,26 @@
         <action
             android:id="@+id/action_data_structure_activity2_to_lessonsFragment2"
             app:destination="@id/lessonsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/flashcardMenuFragment"
+        android:name="com.example.buildingblocksteam1.Flashcard.FlashcardMenuFragment"
+        android:label="fragment_flashcard_menu"
+        tools:layout="@layout/fragment_flashcard_menu" >
+        <action
+            android:id="@+id/action_flashcardMenuFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_flashcardMenuFragment_to_linkedListFlashcardFragment"
+            app:destination="@id/linkedListFlashcardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/linkedListFlashcardFragment"
+        android:name="com.example.buildingblocksteam1.LinkedListFlashcardFragment"
+        android:label="fragment_linked_list_flashcard"
+        tools:layout="@layout/fragment_linked_list_flashcard" >
+        <action
+            android:id="@+id/action_linkedListFlashcardFragment_to_flashcardMenuFragment"
+            app:destination="@id/flashcardMenuFragment" />
     </fragment>
 </navigation>

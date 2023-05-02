@@ -54,26 +54,123 @@
                 android:layout_width="411dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/button_text"
-                android:text="@string/quiz_linked_list"></Button>
+                android:text="LinkedList Quiz"></Button>
 
             <Button
-                android:id="@+id/button_array_list"
+                android:id="@+id/button_stacks"
                 android:layout_width="411dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/button_text"
-                android:text="@string/quiz_array_list"></Button>
+                android:text="Stacks Quiz"></Button>
 
             <Button
+                android:id="@+id/button_queues"
                 android:layout_width="411dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/button_text"
-                android:text="@string/quiz_placeholder1"></Button>
+                android:text="Queues Quiz"></Button>
 
             <Button
+                android:id="@+id/button_trees"
                 android:layout_width="411dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/button_text"
-                android:text="@string/quiz_placeholder2"></Button>
+                android:text="Trees Quiz"></Button>
+
+            <Button
+                android:id="@+id/button_graphs"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="Graphs Quiz"></Button>
+
+            <Button
+                android:id="@+id/button_hash_tables"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="Hash Tables Quiz"></Button>
+
+            <Button
+                android:id="@+id/button_sets_maps"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="Sets and Maps Quiz"></Button>
+            <Button
+                android:id="@+id/button_heaps"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="Heaps Quiz"></Button>
+
+            <Button
+                android:id="@+id/button_sorting"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="Sorting Algorithms Quiz"></Button>
+
+            <Button
+                android:id="@+id/button_searching"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="Searching Algorithms Quiz"></Button>
+
+            <Button
+                android:id="@+id/button_greedy"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="Greedy Algorithms Quiz"></Button>
+
+            <Button
+                android:id="@+id/button_divide_conquer"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="Divide and Conquer Quiz"></Button>
+
+            <Button
+                android:id="@+id/button_dynamic_programming"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="Dynamic Programming Quiz"></Button>
+
+            <Button
+                android:id="@+id/button_backtracing"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="Backtracing Quiz"></Button>
+
+            <Button
+                android:id="@+id/button_brute_force"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="Brute Force Quiz"></Button>
+
+            <Button
+                android:id="@+id/button_randomized"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="Randomized Quiz"></Button>
+
+            <Button
+                android:id="@+id/button_string_matching"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="String Matching Quiz"></Button>
+
+
+
+
+
 
         </LinearLayout>
 

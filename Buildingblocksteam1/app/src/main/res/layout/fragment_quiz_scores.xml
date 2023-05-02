@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/padding_regular"
-        android:text="@string/quiz_title"
+        android:text="Quiz Scores Menu"
         android:textAppearance=
             "@android:style/TextAppearance.DeviceDefault.Large"
         android:textColor="@color/figma_orange"
@@ -43,30 +43,122 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/button_linked_list2"
+                android:id="@+id/button_linked_list"
                 android:layout_width="411dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/button_text"
                 android:text="LinkedList Quiz Score: Not Completed"></Button>
 
             <Button
-                android:id="@+id/button_array_list2"
+                android:id="@+id/button_stacks"
                 android:layout_width="411dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/button_text"
-                android:text="ArrayList Quiz Score: Not Completed"></Button>
+                android:text="Stacks Quiz Score: Not Completed"></Button>
 
             <Button
+                android:id="@+id/button_queues"
                 android:layout_width="411dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/button_text"
-                android:text="Placeholder Quiz Score: Not Completed"></Button>
+                android:text="Queues Quiz Score: Not Completed"></Button>
 
             <Button
+                android:id="@+id/button_trees"
                 android:layout_width="411dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/button_text"
-                android:text="Placeholder2 Quiz Score: Not Completed"></Button>
+                android:text="Trees Quiz Score: Not Completed"></Button>
+
+            <Button
+                android:id="@+id/button_graphs"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="Graphs Quiz Score: Not Completed"></Button>
+
+            <Button
+                android:id="@+id/button_hash_tables"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="Hash Tables Quiz Score: Not Completed"></Button>
+
+            <Button
+                android:id="@+id/button_sets_maps"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="Sets and Maps Quiz Score: Not Completed"></Button>
+            <Button
+                android:id="@+id/button_heaps"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="Heaps Quiz Score: Not Completed"></Button>
+
+            <Button
+                android:id="@+id/button_sorting"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="Sorting Algorithms Quiz Score: Not Completed"></Button>
+
+            <Button
+                android:id="@+id/button_searching"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="Searching Algorithms Quiz Score: Not Completed"></Button>
+
+            <Button
+                android:id="@+id/button_greedy"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="Greedy Algorithms Quiz Score: Not Completed"></Button>
+
+            <Button
+                android:id="@+id/button_divide_conquer"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="Divide and Conquer Quiz Score: Not Completed"></Button>
+
+            <Button
+                android:id="@+id/button_dynamic_programming"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="Dynamic Programming Quiz Score: Not Completed"></Button>
+
+            <Button
+                android:id="@+id/button_backtracing"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="Backtracing Quiz Score: Not Completed"></Button>
+
+            <Button
+                android:id="@+id/button_brute_force"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="Brute Force Quiz Score: Not Completed"></Button>
+
+            <Button
+                android:id="@+id/button_randomized"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="Randomized Quiz Score: Not Completed"></Button>
+
+            <Button
+                android:id="@+id/button_string_matching"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="String Matching Quiz Score: Not Completed"></Button>
 
         </LinearLayout>
 
