@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TreesLectureFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">>
+
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/youtube_player_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="10dp"
+            app:autoPlay="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:videoId="IpyCqRmaKW4" />
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onClick"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/bg_removed_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trees"
+            android:textColor="@color/figma_orange"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/youtube_player_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.686" />
+
+        <TextView
+            android:id="@+id/textView2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/youtube_player_view"
+            android:layout_width="408dp"
+            android:layout_height="428dp"
+            android:text="In a tree, each node can have zero or more child nodes, except for the leaf nodes which have no children. Nodes that have the same parent are called siblings. The depth of a node is the length of the path from the root to that node, and the height of a tree is the maximum depth of any node in the tree.
+Trees can be classified into different types based on their characteristics and the number of child nodes each node can have. Some common types of trees include binary trees, where each node has at most two children, and balanced trees like AVL trees and red-black trees, which have additional constraints to ensure efficient search and insertion operations.
+Tree traversal is a common operation performed on trees to visit and process each node in a specific order. Some common tree traversal algorithms include in-order traversal, pre-order traversal, and post-order traversal. These algorithms provide different sequences of visiting the nodes and are used for various applications like searching, sorting, and evaluating mathematical expressions."
+            android:textAlignment="center"
+            android:textColor="@color/figma_lime_green"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="303dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

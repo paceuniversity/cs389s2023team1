@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QueuesLectureFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">>
+
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/youtube_player_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="10dp"
+            app:autoPlay="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:videoId="q5oOYxfOD1c" />
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onClick"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/bg_removed_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Queue"
+            android:textColor="@color/figma_orange"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/youtube_player_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.686" />
+
+        <TextView
+            android:id="@+id/textView2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/youtube_player_view"
+            android:layout_width="408dp"
+            android:layout_height="428dp"
+            android:text="Order of Processing: Queues follow a 'first-in, first-out' (FIFO) order, meaning that the first element added to the queue is the first one to be processed or removed. New elements are added to the back of the queue, while removal or processing occurs from the front.
+        Common Usage: Queues are widely used in computer science and programming for managing tasks, scheduling processes, and coordinating communication between different parts of a system. For example, they are used in job scheduling, network packet management, and message passing between threads or processes.
+        Operations: Queues typically support two primary operations: enqueue and dequeue. Enqueue adds an element to the back of the queue, while dequeue removes and returns the element from the front. Some queue implementations may also include additional operations, such as peek (to view the front element without removing it) or size (to determine the number of elements in the queue)."
+            android:textAlignment="center"
+            android:textColor="@color/figma_lime_green"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="303dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

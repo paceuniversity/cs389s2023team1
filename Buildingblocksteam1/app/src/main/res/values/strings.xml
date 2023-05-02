@@ -83,5 +83,26 @@ Searching for an element is costly and requires O(n) time complexity.
 Sorting of linked lists is very complex and costly.
 Appending an element to a linked list is a costly operation, and takes O(n) time, where n is the number of elements in the linked list, as compared to arrays that take O(1) time.</string>
 
+    <string name="hash_tables_lec">Data Structure: A hash table is a data structure that allows efficient storage and retrieval of key-value pairs. It is also known as a hash map, hash map, or associative array.
+Hash Function: A hash table uses a hash function to convert the keys into an index or a hash code, which determines the location in the underlying array where the value will be stored. The hash function should ideally distribute the keys uniformly across the array to minimize collisions.
+Collisions: Collisions occur when two or more keys produce the same hash code or index. Hash tables employ collision resolution techniques, such as chaining or open addressing, to handle collisions and store multiple values at the same index.
+Efficient Retrieval: Hash tables offer constant-time (O(1)) average-case complexity for retrieval, insertion, and deletion operations. This means that the time required to perform these operations does not depend on the number of elements stored in the hash table.
+Trade-Offs: Hash tables trade space for time. They require additional memory to store the underlying array and handle collisions efficiently. The load factor, defined as the ratio of the number of stored elements to the size of the array, affects the performance of the hash table. A higher load factor increases the likelihood of collisions.
+Resizing: Hash tables often dynamically resize themselves to maintain an optimal load factor. When the number of elements exceeds a certain threshold, the hash table is resized by creating a larger underlying array and rehashing the existing elements to distribute them evenly.
+Applications: Hash tables are widely used in various applications. They are particularly useful for implementing lookup tables, symbol tables, caches, and data indexing structures. They provide efficient access to data and are essential in many algorithms and data processing systems.</string>
+
+    <string name="graphs_lec">Graphs are mathematical structures used to represent and analyze relationships between objects or entities. They consist of nodes (also known as vertices) and edges that connect the nodes.
+Graphs can be used to model various real-world scenarios, such as social networks, transportation systems, computer networks, and biological interactions.
+The nodes in a graph can represent different entities, such as people, cities, or web pages. The edges represent the connections or relationships between these entities.
+Graphs can be classified into different types based on their properties. Some common types include directed graphs (where edges have a specific direction), undirected graphs (where edges have no specific direction), weighted graphs (where edges have assigned values or weights), and bipartite graphs (where nodes can be divided into two disjoint sets).
+Graphs can be traversed or searched using various algorithms such as depth-first search (DFS) and breadth-first search (BFS). These algorithms help explore and analyze the structure and connectivity of a graph.
+Graph theory is a branch of mathematics that deals with the study of graphs. It provides a framework for analyzing and solving problems related to graphs, including finding the shortest path between nodes, identifying cycles, and determining connectivity.
+Graphs have numerous practical applications in various fields. For example, they are used in data science for analyzing relationships between variables, in computer science for designing algorithms and data structures, in logistics for optimizing transportation routes, and in social sciences for studying interactions and networks of individuals.</string>
+
+    <string name="heaps_lec">A heap is a specialized tree-based data structure that satisfies the heap property. The heap property states that for every node in the heap, the value of the node is either greater than or equal to (in a max heap) or less than or equal to (in a min heap) the values of its children.
+Heaps are commonly used to implement priority queues, where elements with higher priorities are extracted before elements with lower priorities.
+Heaps are typically implemented using an array or a binary tree. Heap operations include inserting a new element, extracting the maximum (or minimum) element, and heapifying (rearranging the elements to maintain the heap property) the heap after modifications.
+The time complexity of the basic heap operations is efficient. Inserting an element or extracting the maximum (or minimum) element takes O(log n) time, where n is the number of elements in the heap.
+Heapsort is an efficient sorting algorithm that utilizes the heap data structure. It first builds a max heap (for sorting in non-decreasing order) or a min heap (for sorting in non-increasing order) from the input array and then repeatedly extracts the maximum (or minimum) element to obtain a sorted array. The time complexity of heapsort is O(n log n), making it suitable for large datasets.</string>
 
 </resources>
