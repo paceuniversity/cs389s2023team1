@@ -157,4 +157,9 @@
             android:id="@+id/action_data_structure_activity2_to_lessonsFragment2"
             app:destination="@id/lessonsFragment2" />
     </fragment>
+    <fragment
+        android:id="@+id/flashcardMenuFragment"
+        android:name="com.example.buildingblocksteam1.Flashcard.FlashcardMenuFragment"
+        android:label="fragment_flashcard_menu"
+        tools:layout="@layout/fragment_flashcard_menu" />
 </navigation>
