@@ -65,7 +65,7 @@
             android:layout_marginTop="196dp"
             android:text="Arrays"
             android:textColor="@color/figma_orange"
-            app:layout_constraintBottom_toBottomOf="@+id/button18"
+            app:layout_constraintBottom_toBottomOf="@+id/LinkedListButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -73,7 +73,7 @@
             app:layout_constraintVertical_bias="1.0" />
 
         <Button
-            android:id="@+id/button18"
+            android:id="@+id/LinkedListButton"
             android:layout_width="408dp"
             android:layout_height="50dp"
             android:layout_marginTop="47dp"
