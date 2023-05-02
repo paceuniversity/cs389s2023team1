@@ -15,13 +15,9 @@ import com.example.buildingblocksteam1.databinding.FragmentFirstBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-
-import java.util.List;
-import java.util.Map;
 
 public class FirstFragment extends Fragment {
 
@@ -141,11 +137,10 @@ public class FirstFragment extends Fragment {
                             if (task.isSuccessful()) {
                                 for (QueryDocumentSnapshot document : task.getResult()) {
                                     name = document.getData().get("username").toString();
-                                    Log.d(TAG, "name => " + name);
-                                    NotificationHelper notifyHelp = new NotificationHelper(getContext());
+                                    Log.d(TAG, "name => " + name);NotificationHelper notifyHelp = new NotificationHelper(getContext());
                                     notifyHelp.createNotificationChannel();
                                     String content = "Hello " + name + "!";
-                                    NotificationCompat.Builder builder = notifyHelp.setNotificationContent("Reminder",content);
+                                    NotificationCompat.Builder builder = notifyHelp.setNotificationContent("Welcome!",content);
                                     notifyHelp.showNotification(1,builder);
                                 }
                             } else {

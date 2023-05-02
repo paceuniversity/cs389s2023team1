@@ -1,12 +1,9 @@
 package com.example.buildingblocksteam1;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.view.View;
 
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -15,6 +12,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.buildingblocksteam1.databinding.ActivityMainBinding;
 
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -29,6 +27,16 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        SharedPreferences wmbPreference = PreferenceManager.getDefaultSharedPreferences(this);
+        boolean isFirstRun = wmbPreference.getBoolean("FIRSTRUN", true);
+        SharedPreferences.Editor editor = wmbPreference.edit();
+
+        if (isFirstRun) {
+            NotificationHelper notifyHelp = new NotificationHelper(this);
+            notifyHelp.createNotificationChannel();
+            editor.putBoolean("FIRSTRUN", false);
+            editor.apply();
+        }
     }
 
     @Override
@@ -59,7 +67,4 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
     }
-
-
-
 }

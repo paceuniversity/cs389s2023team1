@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.buildingblocksteam1.FirebaseLogin.FirebaseLoginFragment;
+import com.example.buildingblocksteam1.NotificationHelper;
 import com.example.buildingblocksteam1.R;
 import com.example.buildingblocksteam1.databinding.FragmentFirebaseSignupBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -248,24 +249,14 @@ public class FirebaseSignupFragment extends Fragment {
         db.collection("UserInformation").add(info);
     }
 
-    //CHECKS FOR MULTIFACTOR
-    /*
-    private void checkForMultiFactorFailure(Exception e) {
-        // Multi-factor authentication with SMS is currently only available for
-        // Google Cloud Identity Platform projects. For more information:
-        // https://cloud.google.com/identity-platform/docs/android/mfa
-        if (e instanceof FirebaseAuthMultiFactorException) {
-            Log.w(TAG, "multiFactorFailure", e);
-            MultiFactorResolver resolver = ((FirebaseAuthMultiFactorException) e).getResolver();
-            Bundle args = new Bundle();
-            args.putParcelable(MultiFactorSignInFragment.EXTRA_MFA_RESOLVER, resolver);
-            args.putBoolean(MultiFactorFragment.RESULT_NEEDS_MFA_SIGN_IN, true);
-            NavHostFragment.findNavController(this)
-                    .navigate(R.id.action_emailpassword_to_mfa, args);
-        }
+    public void reminderNotification()
+    {
+        NotificationHelper notificationUtils = new NotificationHelper(getContext());
+        long currentTime = System.currentTimeMillis();
+        long oneDayInMillis = 1000 * 60 * 60 * 24;
+        long triggerReminder = currentTime + oneDayInMillis; //triggers a reminder after 10 seconds.
+        notificationUtils.setReminder(triggerReminder);
     }
-*/
-
 
     @Override
     public void onDestroyView() {
