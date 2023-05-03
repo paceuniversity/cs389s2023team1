@@ -22,17 +22,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:focusable="true" />
-        <Button
-            android:id="@+id/hash_tables_bt"
-            android:layout_width="408dp"
-            android:layout_height="50dp"
-            android:layout_marginBottom="40dp"
-            android:text="String Matching"
-            android:textColor="@color/figma_orange"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.333"
-            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/sortingalgo"
@@ -41,88 +30,77 @@
             android:text="Sorting Algorithms"
             android:layout_marginBottom="2dp"
             android:textColor="@color/figma_orange"
-            app:layout_constraintBottom_toTopOf="@+id/stacks_ds"
+            app:layout_constraintBottom_toTopOf="@+id/searching_algo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/stacks_ds"
+            android:id="@+id/searching_algo"
             android:layout_width="408dp"
             android:layout_height="50dp"
             android:layout_marginBottom="2dp"
             android:text="Searching Algorithms"
             android:textColor="@color/figma_orange"
-            app:layout_constraintBottom_toTopOf="@+id/button17"
+            app:layout_constraintBottom_toTopOf="@+id/greedy_algo"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/button17"
+            android:id="@+id/greedy_algo"
             android:layout_width="408dp"
             android:layout_height="50dp"
             android:layout_marginBottom="2dp"
             android:text="Greedy Algorithms"
             android:textColor="@color/figma_orange"
-            app:layout_constraintBottom_toTopOf="@+id/button18"
+            app:layout_constraintBottom_toTopOf="@+id/divide_conq_algo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/button18"
+            android:id="@+id/divide_conq_algo"
             android:layout_width="408dp"
             android:layout_height="50dp"
             android:layout_marginBottom="2dp"
             android:text="Divide and Conquer"
             android:textColor="@color/figma_orange"
-            app:layout_constraintBottom_toTopOf="@+id/queues_bt"
+            app:layout_constraintBottom_toTopOf="@+id/dynamic_algo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/queues_bt"
+            android:id="@+id/dynamic_algo"
             android:layout_width="408dp"
             android:layout_height="50dp"
             android:layout_marginBottom="2dp"
             android:text="Dynamic Programming"
             android:textColor="@color/figma_orange"
-            app:layout_constraintBottom_toTopOf="@+id/graphs_bt"
+            app:layout_constraintBottom_toTopOf="@+id/backtracking_algo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/graphs_bt"
+            android:id="@+id/backtracking_algo"
             android:layout_width="408dp"
             android:layout_height="50dp"
             android:text="Backtracking"
             android:textColor="@color/figma_orange"
             android:layout_marginBottom="2dp"
-            app:layout_constraintBottom_toTopOf="@+id/button14"
+            app:layout_constraintBottom_toTopOf="@+id/brute_force_algo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.666"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/button14"
-            android:layout_width="408dp"
-            android:layout_height="50dp"
-            android:text="Brute Force"
-            android:textColor="@color/figma_orange"
-            android:layout_marginBottom="2dp"
-            app:layout_constraintBottom_toTopOf="@+id/heaps_bt"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/heaps_bt"
+            android:id="@+id/brute_force_algo"
             android:layout_width="408dp"
             android:layout_height="50dp"
-            android:layout_marginBottom="2dp"
-            android:text="Randomized"
+            android:layout_marginBottom="104dp"
+            android:text="Brute Force"
             android:textColor="@color/figma_orange"
-            app:layout_constraintBottom_toTopOf="@+id/hash_tables_bt"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent" />
@@ -131,11 +109,12 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="112dp"
             android:text="Algorithms"
             android:textColor="@color/figma_orange"
             android:textSize="34dp"
-            app:layout_constraintBottom_toTopOf="@+id/trees_bt"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>

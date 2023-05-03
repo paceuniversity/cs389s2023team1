@@ -150,6 +150,15 @@
         <action
             android:id="@+id/action_algorithmsTopicsFragment2_to_lessonsFragment2"
             app:destination="@id/lessonsFragment2" />
+        <action
+            android:id="@+id/action_algorithmsTopicsFragment2_to_searchingAlgoFragment"
+            app:destination="@id/searchingAlgoFragment" />
+        <action
+            android:id="@+id/action_algorithmsTopicsFragment2_to_greedyAlgoFragment"
+            app:destination="@id/greedyAlgoFragment" />
+        <action
+            android:id="@+id/action_algorithmsTopicsFragment2_to_divideConquerAlgoFragment"
+            app:destination="@id/divideConquerAlgoFragment" />
     </fragment>
     <fragment
         android:id="@+id/data_structure_activity2"
@@ -183,10 +192,16 @@
         <action
             android:id="@+id/action_data_structure_activity2_to_heapsLectureFragment"
             app:destination="@id/heapsLectureFragment" />
+        <action
+            android:id="@+id/action_data_structure_activity2_to_stacksLectureFragment2"
+            app:destination="@id/stacksLectureFragment" />
+        <action
+            android:id="@+id/action_data_structure_activity2_to_arrayLectureFragment"
+            app:destination="@id/arrayLectureFragment" />
     </fragment>
     <fragment
         android:id="@+id/linkedListLectureFragment"
-        android:name="com.example.buildingblocksteam1.LinkedListLectureFragment"
+        android:name="com.example.buildingblocksteam1.dataStructuresLectures.LinkedListLectureFragment"
         android:label="fragment_linked_list_lecture"
         tools:layout="@layout/fragment_linked_list_lecture" >
         <action
@@ -216,7 +231,7 @@
     </fragment>
     <fragment
         android:id="@+id/stacksLectureFragment"
-        android:name="com.example.buildingblocksteam1.StacksLectureFragment"
+        android:name="com.example.buildingblocksteam1.dataStructuresLectures.StacksLectureFragment"
         android:label="fragment_stacks_lecture"
         tools:layout="@layout/fragment_stacks_lecture" >
         <action
@@ -225,7 +240,7 @@
     </fragment>
     <fragment
         android:id="@+id/queuesLectureFragment"
-        android:name="com.example.buildingblocksteam1.QueuesLectureFragment"
+        android:name="com.example.buildingblocksteam1.dataStructuresLectures.QueuesLectureFragment"
         android:label="fragment_queues_lecture"
         tools:layout="@layout/fragment_queues_lecture" >
         <action
@@ -234,7 +249,7 @@
     </fragment>
     <fragment
         android:id="@+id/treesLectureFragment"
-        android:name="com.example.buildingblocksteam1.TreesLectureFragment"
+        android:name="com.example.buildingblocksteam1.dataStructuresLectures.TreesLectureFragment"
         android:label="fragment_trees_lecture"
         tools:layout="@layout/fragment_trees_lecture" >
         <action
@@ -243,7 +258,7 @@
     </fragment>
     <fragment
         android:id="@+id/graphsLectureFragment"
-        android:name="com.example.buildingblocksteam1.GraphsLectureFragment"
+        android:name="com.example.buildingblocksteam1.dataStructuresLectures.GraphsLectureFragment"
         android:label="fragment_graphs_lecture"
         tools:layout="@layout/fragment_graphs_lecture" >
         <action
@@ -252,7 +267,7 @@
     </fragment>
     <fragment
         android:id="@+id/hashTablesFragment"
-        android:name="com.example.buildingblocksteam1.HashTablesFragment"
+        android:name="com.example.buildingblocksteam1.dataStructuresLectures.HashTablesFragment"
         android:label="fragment_hash_tables"
         tools:layout="@layout/fragment_hash_tables" >
         <action
@@ -261,11 +276,47 @@
     </fragment>
     <fragment
         android:id="@+id/heapsLectureFragment"
-        android:name="com.example.buildingblocksteam1.HeapsLectureFragment"
+        android:name="com.example.buildingblocksteam1.dataStructuresLectures.HeapsLectureFragment"
         android:label="fragment_heaps_lecture"
         tools:layout="@layout/fragment_heaps_lecture" >
         <action
             android:id="@+id/action_heapsLectureFragment_to_data_structure_activity2"
             app:destination="@id/data_structure_activity2" />
+    </fragment>
+    <fragment
+        android:id="@+id/arrayLectureFragment"
+        android:name="com.example.buildingblocksteam1.dataStructuresLectures.ArrayLectureFragment"
+        android:label="fragment_array_lecture"
+        tools:layout="@layout/fragment_array_lecture" >
+        <action
+            android:id="@+id/action_arrayLectureFragment_to_data_structure_activity2"
+            app:destination="@id/data_structure_activity2" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchingAlgoFragment"
+        android:name="com.example.buildingblocksteam1.SearchingAlgoFragment"
+        android:label="fragment_searching_algo"
+        tools:layout="@layout/fragment_searching_algo" >
+        <action
+            android:id="@+id/action_searchingAlgoFragment_to_algorithmsTopicsFragment2"
+            app:destination="@id/algorithmsTopicsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/greedyAlgoFragment"
+        android:name="com.example.buildingblocksteam1.GreedyAlgoFragment"
+        android:label="fragment_greedy_algo"
+        tools:layout="@layout/fragment_greedy_algo" >
+        <action
+            android:id="@+id/action_greedyAlgoFragment_to_algorithmsTopicsFragment2"
+            app:destination="@id/algorithmsTopicsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/divideConquerAlgoFragment"
+        android:name="com.example.buildingblocksteam1.DivideConquerAlgoFragment"
+        android:label="fragment_divide_conquer_algo"
+        tools:layout="@layout/fragment_divide_conquer_algo" >
+        <action
+            android:id="@+id/action_divideConquerAlgoFragment_to_algorithmsTopicsFragment2"
+            app:destination="@id/algorithmsTopicsFragment2" />
     </fragment>
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.buildingblocksteam1;
+package com.example.buildingblocksteam1.dataStructuresLectures;
 
 import android.os.Bundle;
 
@@ -10,15 +10,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.buildingblocksteam1.R;
+import com.example.buildingblocksteam1.databinding.FragmentHashTablesBinding;
 import com.example.buildingblocksteam1.databinding.FragmentHeapsLectureBinding;
-import com.example.buildingblocksteam1.databinding.FragmentQueuesLectureBinding;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link QueuesLectureFragment#newInstance} factory method to
+ * Use the {@link HeapsLectureFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class QueuesLectureFragment extends Fragment {
+public class HeapsLectureFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,9 +30,9 @@ public class QueuesLectureFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    private FragmentQueuesLectureBinding binding;
+    private FragmentHeapsLectureBinding binding;
 
-    public QueuesLectureFragment() {
+    public HeapsLectureFragment() {
         // Required empty public constructor
     }
 
@@ -41,11 +42,11 @@ public class QueuesLectureFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment QueuesLectureFragment.
+     * @return A new instance of fragment HeapsLectureFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static QueuesLectureFragment newInstance(String param1, String param2) {
-        QueuesLectureFragment fragment = new QueuesLectureFragment();
+    public static HeapsLectureFragment newInstance(String param1, String param2) {
+        HeapsLectureFragment fragment = new HeapsLectureFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -66,7 +67,7 @@ public class QueuesLectureFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        binding = FragmentQueuesLectureBinding.inflate(inflater, container, false);
+        binding = FragmentHeapsLectureBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
@@ -76,8 +77,8 @@ public class QueuesLectureFragment extends Fragment {
         binding.backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(QueuesLectureFragment.this)
-                        .navigate(R.id.action_queuesLectureFragment_to_data_structure_activity2);
+                NavHostFragment.findNavController(HeapsLectureFragment.this)
+                        .navigate(R.id.action_heapsLectureFragment_to_data_structure_activity2);
             }
         });
 

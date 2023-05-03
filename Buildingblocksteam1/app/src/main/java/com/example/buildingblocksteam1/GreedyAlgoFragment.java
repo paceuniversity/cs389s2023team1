@@ -10,15 +10,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.buildingblocksteam1.databinding.FragmentQueuesLectureBinding;
-import com.example.buildingblocksteam1.databinding.FragmentStacksLectureBinding;
+import com.example.buildingblocksteam1.dataStructuresLectures.ArrayLectureFragment;
+import com.example.buildingblocksteam1.databinding.FragmentDivideConquerAlgoBinding;
+import com.example.buildingblocksteam1.databinding.FragmentGreedyAlgoBinding;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link StacksLectureFragment#newInstance} factory method to
+ * Use the {@link GreedyAlgoFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class StacksLectureFragment extends Fragment {
+public class GreedyAlgoFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,9 +30,8 @@ public class StacksLectureFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    private FragmentStacksLectureBinding binding;
-
-    public StacksLectureFragment() {
+    private FragmentGreedyAlgoBinding binding;
+    public GreedyAlgoFragment() {
         // Required empty public constructor
     }
 
@@ -41,11 +41,11 @@ public class StacksLectureFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment StacksLectureFragment.
+     * @return A new instance of fragment GreedyAlgoFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static StacksLectureFragment newInstance(String param1, String param2) {
-        StacksLectureFragment fragment = new StacksLectureFragment();
+    public static GreedyAlgoFragment newInstance(String param1, String param2) {
+        GreedyAlgoFragment fragment = new GreedyAlgoFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -66,7 +66,7 @@ public class StacksLectureFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        binding = FragmentStacksLectureBinding.inflate(inflater, container, false);
+        binding = FragmentGreedyAlgoBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
@@ -76,8 +76,8 @@ public class StacksLectureFragment extends Fragment {
         binding.backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(StacksLectureFragment.this)
-                        .navigate(R.id.action_stacksLectureFragment_to_data_structure_activity2);
+                NavHostFragment.findNavController(GreedyAlgoFragment.this)
+                        .navigate(R.id.action_greedyAlgoFragment_to_algorithmsTopicsFragment2);
             }
         });
 

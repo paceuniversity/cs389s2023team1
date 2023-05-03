@@ -134,5 +134,13 @@ public class data_structure_activity extends Fragment {
             }
         });
 
+        binding.arraysBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController( data_structure_activity.this)
+                        .navigate( R.id.action_data_structure_activity2_to_arrayLectureFragment);
+            }
+        });
+
     }
 }

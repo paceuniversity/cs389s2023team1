@@ -1,4 +1,4 @@
-package com.example.buildingblocksteam1;
+package com.example.buildingblocksteam1.dataStructuresLectures;
 
 import android.os.Bundle;
 
@@ -10,15 +10,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.buildingblocksteam1.R;
 import com.example.buildingblocksteam1.databinding.FragmentHashTablesBinding;
-import com.example.buildingblocksteam1.databinding.FragmentHeapsLectureBinding;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link HeapsLectureFragment#newInstance} factory method to
+ * Use the {@link HashTablesFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HeapsLectureFragment extends Fragment {
+public class HashTablesFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,9 +29,9 @@ public class HeapsLectureFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    private FragmentHeapsLectureBinding binding;
+    private FragmentHashTablesBinding binding;
 
-    public HeapsLectureFragment() {
+    public HashTablesFragment() {
         // Required empty public constructor
     }
 
@@ -41,11 +41,11 @@ public class HeapsLectureFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment HeapsLectureFragment.
+     * @return A new instance of fragment HashTablesFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static HeapsLectureFragment newInstance(String param1, String param2) {
-        HeapsLectureFragment fragment = new HeapsLectureFragment();
+    public static HashTablesFragment newInstance(String param1, String param2) {
+        HashTablesFragment fragment = new HashTablesFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -66,7 +66,7 @@ public class HeapsLectureFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        binding = FragmentHeapsLectureBinding.inflate(inflater, container, false);
+        binding = FragmentHashTablesBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
@@ -76,8 +76,8 @@ public class HeapsLectureFragment extends Fragment {
         binding.backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(HeapsLectureFragment.this)
-                        .navigate(R.id.action_heapsLectureFragment_to_data_structure_activity2);
+                NavHostFragment.findNavController(HashTablesFragment.this)
+                        .navigate(R.id.action_hashTablesFragment_to_data_structure_activity2);
             }
         });
 

@@ -91,9 +91,7 @@ Trade-Offs: Hash tables trade space for time. They require additional memory to 
 Resizing: Hash tables often dynamically resize themselves to maintain an optimal load factor. When the number of elements exceeds a certain threshold, the hash table is resized by creating a larger underlying array and rehashing the existing elements to distribute them evenly.
 Applications: Hash tables are widely used in various applications. They are particularly useful for implementing lookup tables, symbol tables, caches, and data indexing structures. They provide efficient access to data and are essential in many algorithms and data processing systems.</string>
 
-    <string name="graphs_lec">Graphs are mathematical structures used to represent and analyze relationships between objects or entities. They consist of nodes (also known as vertices) and edges that connect the nodes.
-Graphs can be used to model various real-world scenarios, such as social networks, transportation systems, computer networks, and biological interactions.
-The nodes in a graph can represent different entities, such as people, cities, or web pages. The edges represent the connections or relationships between these entities.
+    <string name="graphs_lec">Graphs are mathematical structures used to represent and analyze relationships between objects or entities.
 Graphs can be classified into different types based on their properties. Some common types include directed graphs (where edges have a specific direction), undirected graphs (where edges have no specific direction), weighted graphs (where edges have assigned values or weights), and bipartite graphs (where nodes can be divided into two disjoint sets).
 Graphs can be traversed or searched using various algorithms such as depth-first search (DFS) and breadth-first search (BFS). These algorithms help explore and analyze the structure and connectivity of a graph.
 Graph theory is a branch of mathematics that deals with the study of graphs. It provides a framework for analyzing and solving problems related to graphs, including finding the shortest path between nodes, identifying cycles, and determining connectivity.

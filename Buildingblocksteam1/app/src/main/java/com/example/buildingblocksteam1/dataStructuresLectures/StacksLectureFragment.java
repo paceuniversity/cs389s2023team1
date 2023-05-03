@@ -1,4 +1,4 @@
-package com.example.buildingblocksteam1;
+package com.example.buildingblocksteam1.dataStructuresLectures;
 
 import android.os.Bundle;
 
@@ -10,15 +10,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.buildingblocksteam1.databinding.FragmentGraphsLectureBinding;
-import com.example.buildingblocksteam1.databinding.FragmentLinkedListLectureBinding;
+import com.example.buildingblocksteam1.R;
+import com.example.buildingblocksteam1.databinding.FragmentQueuesLectureBinding;
+import com.example.buildingblocksteam1.databinding.FragmentStacksLectureBinding;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link GraphsLectureFragment#newInstance} factory method to
+ * Use the {@link StacksLectureFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class GraphsLectureFragment extends Fragment {
+public class StacksLectureFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,9 +30,9 @@ public class GraphsLectureFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    private FragmentGraphsLectureBinding binding;
+    private FragmentStacksLectureBinding binding;
 
-    public GraphsLectureFragment() {
+    public StacksLectureFragment() {
         // Required empty public constructor
     }
 
@@ -41,11 +42,11 @@ public class GraphsLectureFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment GraphsLectureFragment.
+     * @return A new instance of fragment StacksLectureFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static GraphsLectureFragment newInstance(String param1, String param2) {
-        GraphsLectureFragment fragment = new GraphsLectureFragment();
+    public static StacksLectureFragment newInstance(String param1, String param2) {
+        StacksLectureFragment fragment = new StacksLectureFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -66,10 +67,9 @@ public class GraphsLectureFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        binding = FragmentGraphsLectureBinding.inflate(inflater, container, false);
+        binding = FragmentStacksLectureBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
-
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -77,8 +77,8 @@ public class GraphsLectureFragment extends Fragment {
         binding.backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(GraphsLectureFragment.this)
-                        .navigate(R.id.action_graphsLectureFragment_to_data_structure_activity2);
+                NavHostFragment.findNavController(StacksLectureFragment.this)
+                        .navigate(R.id.action_stacksLectureFragment_to_data_structure_activity2);
             }
         });
 

@@ -88,6 +88,32 @@ public class AlgorithmsTopicsFragment extends Fragment {
             }
         });
 
+        binding.searchingAlgo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController( AlgorithmsTopicsFragment.this)
+                        .navigate( R.id.action_algorithmsTopicsFragment2_to_searchingAlgoFragment);
+            }
+        });
+
+        binding.greedyAlgo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController( AlgorithmsTopicsFragment.this)
+                        .navigate( R.id.action_algorithmsTopicsFragment2_to_greedyAlgoFragment);
+            }
+        });
+
+        binding.divideConqAlgo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController( AlgorithmsTopicsFragment.this)
+                        .navigate( R.id.action_algorithmsTopicsFragment2_to_divideConquerAlgoFragment);
+            }
+        });
+
+
+
 
     }
 
