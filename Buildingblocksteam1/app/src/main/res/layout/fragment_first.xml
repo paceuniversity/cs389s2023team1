@@ -76,11 +76,11 @@
         android:textColor="@color/black"/>
 
     <Button
-        android:id="@+id/button_first"
+        android:id="@+id/About_us"
         android:layout_width="182dp"
         android:layout_height="55dp"
         android:background="@color/figma_lime_green"
-        android:text="@string/next"
+        android:text="About"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

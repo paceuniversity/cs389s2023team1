@@ -26,6 +26,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_flashcardMenuFragment"
             app:destination="@id/flashcardMenuFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_aboutUsFragment"
+            app:destination="@id/aboutUsFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -318,5 +321,14 @@
         <action
             android:id="@+id/action_divideConquerAlgoFragment_to_algorithmsTopicsFragment2"
             app:destination="@id/algorithmsTopicsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.example.buildingblocksteam1.AboutUsFragment"
+        android:label="fragment_about_us"
+        tools:layout="@layout/fragment_about_us" >
+        <action
+            android:id="@+id/action_aboutUsFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>
