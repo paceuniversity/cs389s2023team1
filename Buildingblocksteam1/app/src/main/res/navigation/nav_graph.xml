@@ -210,6 +210,9 @@
         <action
             android:id="@+id/action_linkedListLectureFragment_to_data_structure_activity2"
             app:destination="@id/data_structure_activity2" />
+        <action
+            android:id="@+id/action_linkedListLectureFragment_to_linkedListQuizFragment"
+            app:destination="@id/linkedListQuizFragment" />
     </fragment>
     <fragment
         android:id="@+id/flashcardMenuFragment"

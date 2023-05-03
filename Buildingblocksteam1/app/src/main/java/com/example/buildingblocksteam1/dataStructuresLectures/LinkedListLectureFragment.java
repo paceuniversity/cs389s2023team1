@@ -81,6 +81,13 @@ public class LinkedListLectureFragment extends Fragment {
             }
         });
 
+        binding.locateQuiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(LinkedListLectureFragment.this)
+                        .navigate(R.id.action_linkedListLectureFragment_to_linkedListQuizFragment);
+            }
+        });
 
     }
 }
