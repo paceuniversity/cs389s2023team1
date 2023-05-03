@@ -17,123 +17,121 @@
             android:layout_width="60dp"
             android:layout_height="40dp"
             android:clickable="true"
+            android:focusable="true"
             android:onClick="onClick"
             android:src="@drawable/bg_removed_arrow"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:focusable="true" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/hash_tables_bt"
             android:layout_width="408dp"
             android:layout_height="50dp"
-            android:layout_marginBottom="4dp"
+            android:layout_marginTop="52dp"
             android:text="Hash Tables"
             android:textColor="@color/figma_orange"
-            app:layout_constraintBottom_toTopOf="@+id/heaps_bt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/graphs_bt" />
+            app:layout_constraintTop_toTopOf="@+id/queues_bt" />
+
 
         <Button
             android:id="@+id/trees_bt"
             android:layout_width="408dp"
             android:layout_height="50dp"
+            android:layout_marginTop="104dp"
             android:text="Trees"
             android:textColor="@color/figma_orange"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.666"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/queues_bt" />
+            app:layout_constraintTop_toTopOf="@+id/graphs_bt" />
 
         <Button
             android:id="@+id/stacks_ds"
             android:layout_width="408dp"
             android:layout_height="50dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="50dp"
             android:text="Stacks"
             android:textColor="@color/figma_orange"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.666"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button17" />
-
+            app:layout_constraintTop_toTopOf="@+id/arrays_bt" />
 
         <Button
-            android:id="@+id/button17"
+            android:id="@+id/arrays_bt"
             android:layout_width="408dp"
             android:layout_height="50dp"
-            android:layout_marginTop="196dp"
+            android:layout_marginTop="48dp"
             android:text="Arrays"
             android:textColor="@color/figma_orange"
-            app:layout_constraintBottom_toBottomOf="@+id/LinkedListButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintTop_toTopOf="@+id/LinkedListButton" />
 
         <Button
             android:id="@+id/LinkedListButton"
             android:layout_width="408dp"
             android:layout_height="50dp"
-            android:layout_marginTop="47dp"
+            android:layout_marginTop="114dp"
             android:text="Linked Lists"
             android:textColor="@color/figma_orange"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            app:layout_constraintTop_toTopOf="@+id/textView3" />
 
         <Button
             android:id="@+id/queues_bt"
             android:layout_width="408dp"
             android:layout_height="50dp"
+            android:layout_marginTop="50dp"
             android:text="Queues"
             android:textColor="@color/figma_orange"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/stacks_ds" />
+            app:layout_constraintTop_toTopOf="@+id/stacks_ds" />
 
         <Button
             android:id="@+id/graphs_bt"
             android:layout_width="408dp"
             android:layout_height="50dp"
+            android:layout_marginTop="48dp"
             android:text="Graphs"
             android:textColor="@color/figma_orange"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.666"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/trees_bt" />
-
+            app:layout_constraintStart_toStartOf="@+id/back_arrow"
+            app:layout_constraintTop_toTopOf="@+id/hash_tables_bt" />
 
         <Button
             android:id="@+id/heaps_bt"
             android:layout_width="408dp"
             android:layout_height="50dp"
-            android:layout_marginBottom="160dp"
+            android:layout_marginTop="52dp"
             android:text="Heaps"
             android:textColor="@color/figma_orange"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toTopOf="@+id/graphs_bt" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="76dp"
+            android:layout_marginTop="84dp"
             android:text="Data Structures"
             android:textColor="@color/figma_orange"
             android:textSize="30dp"
-            app:layout_constraintBottom_toTopOf="@+id/button17"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/back_arrow" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

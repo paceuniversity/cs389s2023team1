@@ -4,44 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".dataStructuresLectures.QueuesLectureFragment">
+    tools:context=".GreedyAlgoFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/black">>
-
+        android:background="@color/black">
 
         <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
             android:id="@+id/youtube_player_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="20dp"
             app:autoPlay="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:videoId="q5oOYxfOD1c" />
+            app:videoId="HzeK7g8cD0Y" />
 
         <ImageView
             android:id="@+id/back_arrow"
             android:layout_width="60dp"
             android:layout_height="40dp"
             android:clickable="true"
-            android:focusable="true"
             android:onClick="onClick"
-            android:layout_marginBottom="10dp"
             android:src="@drawable/bg_removed_arrow"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:focusable="true" />
 
         <TextView
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Queue"
+            android:text="Greedy Algorithm"
             android:textColor="@color/figma_orange"
             android:textSize="20dp"
             android:layout_marginTop="10dp"
@@ -55,20 +53,21 @@
 
         <TextView
             android:id="@+id/textView2"
+            android:layout_width="408dp"
+            android:layout_height="428dp"
+            android:text="Greedy Algorithm is a problem-solving approach that makes locally optimal choices at each step with the aim of finding a global optimum. It works by selecting the best immediate option without considering the overall consequences.
+The algorithm iteratively makes greedy choices that lead to the most favorable outcome at the current moment, hoping that the sequence of such choices will result in an optimal solution.
+Greedy algorithms are often used for optimization problems where the goal is to maximize or minimize a certain objective function. They are particularly useful when a problem exhibits the greedy-choice property, which means that making a locally optimal choice at each step eventually leads to a global optimum.
+While greedy algorithms are relatively simple to implement and efficient to run, they do not guarantee the optimal solution in every case. In some scenarios, a greedy approach may lead to a suboptimal or incorrect result.
+To determine whether a greedy algorithm will produce the optimal solution for a given problem, one needs to analyze the problem's characteristics and assess whether the greedy-choice property holds. Additionally, it is essential to provide a proof of correctness to ensure that the algorithm consistently produces the desired outcome."
+            android:textColor="@color/figma_lime_green"
+            android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/youtube_player_view"
-            android:layout_width="408dp"
-            android:layout_height="428dp"
-            android:text="Order of Processing: Queues follow a 'first-in, first-out' (FIFO) order, meaning that the first element added to the queue is the first one to be processed or removed. New elements are added to the back of the queue, while removal or processing occurs from the front.
-        Common Usage: Queues are widely used in computer science and programming for managing tasks, scheduling processes, and coordinating communication between different parts of a system. For example, they are used in job scheduling, network packet management, and message passing between threads or processes.
-        Operations: Queues typically support two primary operations: enqueue and dequeue. Enqueue adds an element to the back of the queue, while dequeue removes and returns the element from the front. Some queue implementations may also include additional operations, such as peek (to view the front element without removing it) or size (to determine the number of elements in the queue)."
-            android:textAlignment="center"
-            android:textColor="@color/figma_lime_green"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="303dp" />
+            app:layout_constraintTop_toBottomOf="@+id/youtube_player_view" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </FrameLayout>
