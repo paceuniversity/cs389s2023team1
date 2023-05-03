@@ -55,7 +55,7 @@ An Android application that will help students learn data structures and algorit
 * [Sprint planning](https://github.com/orgs/paceuniversity/projects/9)
 * [Scrums](https://docs.google.com/document/d/14ytfOcr4hhaIUCTTlE5KXt5c1tGGKwdQ4fHVi0l87Yg/edit?usp=sharing)
 * [Sprint demo video]()
-* [Sprint retrospective]()
+* [Sprint retrospective](https://docs.google.com/document/d/1OutukMfQ6want6EMb-jJBk0CoFzcAZ6ZZbkFPbDcNFE/edit?usp=sharing)
 
 ## Tools & APIs
 Android Studio, Discord, Firebase, iFrame
