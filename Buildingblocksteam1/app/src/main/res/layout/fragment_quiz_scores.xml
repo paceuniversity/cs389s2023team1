@@ -48,7 +48,12 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/button_text"
                 android:text="LinkedList Quiz Score: Not Completed"></Button>
-
+            <Button
+                android:id="@+id/button_arrays"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="Arrays Quiz Score: Not Completed"></Button>
             <Button
                 android:id="@+id/button_stacks"
                 android:layout_width="411dp"
@@ -84,12 +89,7 @@
                 android:textColor="@color/button_text"
                 android:text="Hash Tables Quiz Score: Not Completed"></Button>
 
-            <Button
-                android:id="@+id/button_sets_maps"
-                android:layout_width="411dp"
-                android:layout_height="wrap_content"
-                android:textColor="@color/button_text"
-                android:text="Sets and Maps Quiz Score: Not Completed"></Button>
+
             <Button
                 android:id="@+id/button_heaps"
                 android:layout_width="411dp"

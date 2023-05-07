@@ -81,7 +81,7 @@ public class LinkedListQuizResultFragment extends Fragment {
         viewModel.getLinkedListScore().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(String data) {
-                binding.linkedlistResult.setText((viewModel.getLinkedListScore().getValue() + "%"));
+                binding.linkedListResult.setText((viewModel.getLinkedListScore().getValue() + "%"));
                 binding.seekBar.setProgress(Integer.parseInt(viewModel.getLinkedListScore().getValue()) / 10);
             }
         });
