@@ -127,6 +127,7 @@ public class FeedbackLinkedlistFragment extends Fragment {
                     radioButton.setTag("true");
                     radioButton.setSelected(true);
                     radioButton.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+                    radioButton.setTextColor(res.getColor(R.color.green));
                     temp = radioButton;
                 }
                 radioButton.setText("" + (char)(j+65) + ". " + answers.get(j));
@@ -136,8 +137,9 @@ public class FeedbackLinkedlistFragment extends Fragment {
             root.addView(radioGroup);
 
             TextView feedback = new TextView(getContext());
-            feedback.setText("Answer: " + temp.getText() + "\nFeedback: " + questions.get(i).getFeedback());
-            feedback.setTextColor(regularColor);
+            feedback.setText("\n\nFeedback: " + questions.get(i).getFeedback() + "\n\n");
+            feedback.setTextColor(res.getColor(R.color.figma_orange));
+            feedback.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
             root.addView(feedback);
 
         }
@@ -147,7 +149,6 @@ public class FeedbackLinkedlistFragment extends Fragment {
         root.addView(submit);
 
         return binding.getRoot();
-        //return inflater.inflate(R.layout.fragment_feedback_linkedlist, container, false);
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {

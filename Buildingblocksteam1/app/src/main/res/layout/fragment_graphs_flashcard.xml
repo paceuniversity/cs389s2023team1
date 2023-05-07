@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/figma_black"
+    tools:context=".Flashcard.GraphsFlashcardFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/article_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_regular"
+        android:text="Graphs Flashcards"
+        android:textAppearance=
+            "@android:style/TextAppearance.DeviceDefault.Large"
+        android:textColor="@color/figma_orange"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:src="@drawable/bg_removed_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:focusable="true" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="600dp"
+        android:layout_below="@id/article_heading"
+        android:translationY="125dp">
+
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_flashcard"
+                android:layout_width="411dp"
+                android:layout_height="411dp"
+                android:backgroundTint="@color/regular_text"
+                android:text=""
+                android:textColor="@color/button_text"></Button>
+
+            <ImageView
+                android:id="@+id/back_arrow_left"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onClick"
+                android:src="@drawable/bg_removed_arrow"
+                android:translationX="-175dp" />
+
+            <ImageView
+                android:id="@+id/back_arrow_right"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onClick"
+                android:rotation="180"
+                android:src="@drawable/bg_removed_arrow"
+                android:translationX="175dp"
+                android:translationY="-42dp" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/regular_text"
+                android:translationY="-75dp"
+                android:text="0/0"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

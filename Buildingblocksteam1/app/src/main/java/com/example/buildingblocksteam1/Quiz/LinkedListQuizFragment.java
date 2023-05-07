@@ -127,7 +127,12 @@ public class LinkedListQuizFragment extends Fragment {
         ArrayList<Question> usedQuestions = new ArrayList<Question>();
         for (int i = 0; i < 10; i++) {
             TextView text = new TextView(this.getContext());
-            text.setText("" + (i+1) + ". " + questions.get(i).getQuestion());
+            if (i == 0) {
+                text.setText("" + (i+1) + ". " + questions.get(i).getQuestion());
+            }
+            else {
+                text.setText("\n" + (i+1) + ". " + questions.get(i).getQuestion());
+            }
             text.setTextColor(regularColor);
             root.addView(text);
 
@@ -186,7 +191,7 @@ public class LinkedListQuizFragment extends Fragment {
                         }
                     }
                 }
-                viewModel.setLinkedlistScore(String.valueOf(score));
+                viewModel.setLinkedListScore(String.valueOf(score));
 
                 NavHostFragment.findNavController(LinkedListQuizFragment.this)
                         .navigate(R.id.action_linkedListQuizFragment_to_linkedListQuizResultFragment);

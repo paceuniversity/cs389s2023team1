@@ -86,6 +86,118 @@ public class QuizMenuFragment extends Fragment {
                         .navigate(R.id.action_quizMenuFragment_to_linkedListQuizFragment);
             }
         });
+        binding.buttonArrays.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(QuizMenuFragment.this)
+                        .navigate(R.id.action_quizMenuFragment_to_arraysQuizFragment);
+            }
+        });
+        binding.buttonStacks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(QuizMenuFragment.this)
+                        .navigate(R.id.action_quizMenuFragment_to_stacksQuizFragment);
+            }
+        });
+        binding.buttonQueues.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(QuizMenuFragment.this)
+                        .navigate(R.id.action_quizMenuFragment_to_queuesQuizFragment);
+            }
+        });
+        binding.buttonTrees.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(QuizMenuFragment.this)
+                        .navigate(R.id.action_quizMenuFragment_to_treesQuizFragment);
+            }
+        });
+        binding.buttonGraphs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(QuizMenuFragment.this)
+                        .navigate(R.id.action_quizMenuFragment_to_graphsQuizFragment);
+            }
+        });
+        binding.buttonHashTables.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(QuizMenuFragment.this)
+                        .navigate(R.id.action_quizMenuFragment_to_hashTablesQuizFragment);
+            }
+        });
+        binding.buttonHeaps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(QuizMenuFragment.this)
+                        .navigate(R.id.action_quizMenuFragment_to_heapsQuizFragment);
+            }
+        });
+        binding.buttonSorting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(QuizMenuFragment.this)
+                        .navigate(R.id.action_quizMenuFragment_to_sortingQuizFragment);
+            }
+        });
+        binding.buttonSearching.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(QuizMenuFragment.this)
+                        .navigate(R.id.action_quizMenuFragment_to_searchingQuizFragment);
+            }
+        });
+        binding.buttonGreedy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(QuizMenuFragment.this)
+                        .navigate(R.id.action_quizMenuFragment_to_greedyQuizFragment);
+            }
+        });
+        binding.buttonDivideConquer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(QuizMenuFragment.this)
+                        .navigate(R.id.action_quizMenuFragment_to_divideAndConquerQuizFragment);
+            }
+        });
+        binding.buttonDynamicProgramming.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(QuizMenuFragment.this)
+                        .navigate(R.id.action_quizMenuFragment_to_dynamicQuizFragment);
+            }
+        });
+        binding.buttonBacktracking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(QuizMenuFragment.this)
+                        .navigate(R.id.action_quizMenuFragment_to_backtrackingQuizFragment);
+            }
+        });
+        binding.buttonBruteForce.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(QuizMenuFragment.this)
+                        .navigate(R.id.action_quizMenuFragment_to_bruteForceQuizFragment);
+            }
+        });
 
         binding.buttonQuizScores.setOnClickListener(new View.OnClickListener() {
             @Override

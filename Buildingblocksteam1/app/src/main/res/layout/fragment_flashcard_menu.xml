@@ -50,6 +50,13 @@ tools:context=".Flashcard.FlashcardMenuFragment">
             android:text="LinkedList Flashcard"></Button>
 
         <Button
+            android:id="@+id/button_arrays"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/button_text"
+            android:text="Arrays Flashcard"></Button>
+
+        <Button
             android:id="@+id/button_stacks"
             android:layout_width="411dp"
             android:layout_height="wrap_content"
@@ -83,13 +90,6 @@ tools:context=".Flashcard.FlashcardMenuFragment">
             android:layout_height="wrap_content"
             android:textColor="@color/button_text"
             android:text="Hash Tables Flashcard"></Button>
-
-        <Button
-            android:id="@+id/button_sets_maps"
-            android:layout_width="411dp"
-            android:layout_height="wrap_content"
-            android:textColor="@color/button_text"
-            android:text="Sets and Maps Flashcard"></Button>
         <Button
             android:id="@+id/button_heaps"
             android:layout_width="411dp"
@@ -133,11 +133,11 @@ tools:context=".Flashcard.FlashcardMenuFragment">
             android:text="Dynamic Programming Flashcard"></Button>
 
         <Button
-            android:id="@+id/button_backtracing"
+            android:id="@+id/button_backtracking"
             android:layout_width="411dp"
             android:layout_height="wrap_content"
             android:textColor="@color/button_text"
-            android:text="Backtracing Flashcard"></Button>
+            android:text="Backtracking Flashcard"></Button>
 
         <Button
             android:id="@+id/button_brute_force"
@@ -145,20 +145,6 @@ tools:context=".Flashcard.FlashcardMenuFragment">
             android:layout_height="wrap_content"
             android:textColor="@color/button_text"
             android:text="Brute Force Flashcard"></Button>
-
-        <Button
-            android:id="@+id/button_randomized"
-            android:layout_width="411dp"
-            android:layout_height="wrap_content"
-            android:textColor="@color/button_text"
-            android:text="Randomized Flashcard"></Button>
-
-        <Button
-            android:id="@+id/button_string_matching"
-            android:layout_width="411dp"
-            android:layout_height="wrap_content"
-            android:textColor="@color/button_text"
-            android:text="String Matching Flashcard"></Button>
 
     </LinearLayout>
 

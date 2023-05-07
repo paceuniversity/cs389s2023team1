@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Quiz.ArraysQuizFragment">
+
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/article_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/figma_black"
+        android:gravity="center"
+        android:padding="@dimen/padding_regular"
+        android:text="Arrays Quiz"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textColor="@color/figma_orange"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:src="@drawable/bg_removed_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:focusable="true" />
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/article_heading">
+
+
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/button_submit"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:textColor="@color/button_text"></Button>
+        </LinearLayout>
+
+
+
+
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
