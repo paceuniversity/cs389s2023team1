@@ -13,6 +13,7 @@
     <color name="figma_lime_green">#FFADFC92</color>
     <color name="button_text">#FF000000</color>
     <color name="regular_text">#FFFFFFFF</color>
+    <color name="green">#FF00FF00</color>
 
 
 </resources>

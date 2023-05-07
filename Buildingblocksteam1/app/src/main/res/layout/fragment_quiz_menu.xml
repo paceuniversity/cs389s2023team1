@@ -55,7 +55,12 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/button_text"
                 android:text="LinkedList Quiz"></Button>
-
+            <Button
+                android:id="@+id/button_arrays"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_text"
+                android:text="Arrays Quiz"></Button>
             <Button
                 android:id="@+id/button_stacks"
                 android:layout_width="411dp"
@@ -91,12 +96,7 @@
                 android:textColor="@color/button_text"
                 android:text="Hash Tables Quiz"></Button>
 
-            <Button
-                android:id="@+id/button_sets_maps"
-                android:layout_width="411dp"
-                android:layout_height="wrap_content"
-                android:textColor="@color/button_text"
-                android:text="Sets and Maps Quiz"></Button>
+
             <Button
                 android:id="@+id/button_heaps"
                 android:layout_width="411dp"
@@ -140,11 +140,11 @@
                 android:text="Dynamic Programming Quiz"></Button>
 
             <Button
-                android:id="@+id/button_backtracing"
+                android:id="@+id/button_backtracking"
                 android:layout_width="411dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/button_text"
-                android:text="Backtracing Quiz"></Button>
+                android:text="Backtracking Quiz"></Button>
 
             <Button
                 android:id="@+id/button_brute_force"
@@ -153,19 +153,6 @@
                 android:textColor="@color/button_text"
                 android:text="Brute Force Quiz"></Button>
 
-            <Button
-                android:id="@+id/button_randomized"
-                android:layout_width="411dp"
-                android:layout_height="wrap_content"
-                android:textColor="@color/button_text"
-                android:text="Randomized Quiz"></Button>
-
-            <Button
-                android:id="@+id/button_string_matching"
-                android:layout_width="411dp"
-                android:layout_height="wrap_content"
-                android:textColor="@color/button_text"
-                android:text="String Matching Quiz"></Button>
 
 
 

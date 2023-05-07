@@ -78,6 +78,48 @@
         <action
             android:id="@+id/action_quizMenuFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_quizMenuFragment_to_treesQuizFragment"
+            app:destination="@id/treesQuizFragment" />
+        <action
+            android:id="@+id/action_quizMenuFragment_to_stacksQuizFragment"
+            app:destination="@id/stacksQuizFragment" />
+        <action
+            android:id="@+id/action_quizMenuFragment_to_sortingQuizFragment"
+            app:destination="@id/sortingQuizFragment" />
+        <action
+            android:id="@+id/action_quizMenuFragment_to_searchingQuizFragment"
+            app:destination="@id/searchingQuizFragment" />
+        <action
+            android:id="@+id/action_quizMenuFragment_to_queuesQuizFragment"
+            app:destination="@id/queuesQuizFragment" />
+        <action
+            android:id="@+id/action_quizMenuFragment_to_heapsQuizFragment"
+            app:destination="@id/heapsQuizFragment" />
+        <action
+            android:id="@+id/action_quizMenuFragment_to_hashTablesQuizFragment"
+            app:destination="@id/hashTablesQuizFragment" />
+        <action
+            android:id="@+id/action_quizMenuFragment_to_greedyQuizFragment"
+            app:destination="@id/greedyQuizFragment" />
+        <action
+            android:id="@+id/action_quizMenuFragment_to_graphsQuizFragment"
+            app:destination="@id/graphsQuizFragment" />
+        <action
+            android:id="@+id/action_quizMenuFragment_to_dynamicQuizFragment"
+            app:destination="@id/dynamicQuizFragment" />
+        <action
+            android:id="@+id/action_quizMenuFragment_to_divideAndConquerQuizFragment"
+            app:destination="@id/divideAndConquerQuizFragment" />
+        <action
+            android:id="@+id/action_quizMenuFragment_to_bruteForceQuizFragment"
+            app:destination="@id/bruteForceQuizFragment" />
+        <action
+            android:id="@+id/action_quizMenuFragment_to_backtrackingQuizFragment"
+            app:destination="@id/backtrackingQuizFragment" />
+        <action
+            android:id="@+id/action_quizMenuFragment_to_arraysQuizFragment"
+            app:destination="@id/arraysQuizFragment" />
     </fragment>
     <fragment
         android:id="@+id/linkedListQuizFragment"
@@ -225,6 +267,48 @@
         <action
             android:id="@+id/action_flashcardMenuFragment_to_linkedListFlashcardFragment"
             app:destination="@id/linkedListFlashcardFragment" />
+        <action
+            android:id="@+id/action_flashcardMenuFragment_to_arraysFlashcardFragment"
+            app:destination="@id/arraysFlashcardFragment" />
+        <action
+            android:id="@+id/action_flashcardMenuFragment_to_backtrackingFlashcardFragment"
+            app:destination="@id/backtrackingFlashcardFragment" />
+        <action
+            android:id="@+id/action_flashcardMenuFragment_to_bruteForceFlashcardFragment"
+            app:destination="@id/bruteForceFlashcardFragment" />
+        <action
+            android:id="@+id/action_flashcardMenuFragment_to_divideAndConquerFlashcardFragment"
+            app:destination="@id/divideAndConquerFlashcardFragment" />
+        <action
+            android:id="@+id/action_flashcardMenuFragment_to_dynamicFlashcardFragment"
+            app:destination="@id/dynamicFlashcardFragment" />
+        <action
+            android:id="@+id/action_flashcardMenuFragment_to_graphsFlashcardFragment"
+            app:destination="@id/graphsFlashcardFragment" />
+        <action
+            android:id="@+id/action_flashcardMenuFragment_to_greedyFlashcardFragment"
+            app:destination="@id/greedyFlashcardFragment" />
+        <action
+            android:id="@+id/action_flashcardMenuFragment_to_hashTablesFlashcardFragment"
+            app:destination="@id/hashTablesFlashcardFragment" />
+        <action
+            android:id="@+id/action_flashcardMenuFragment_to_heapsFlashcardFragment"
+            app:destination="@id/heapsFlashcardFragment" />
+        <action
+            android:id="@+id/action_flashcardMenuFragment_to_queuesFlashcardFragment"
+            app:destination="@id/queuesFlashcardFragment" />
+        <action
+            android:id="@+id/action_flashcardMenuFragment_to_searchingFlashcardFragment"
+            app:destination="@id/searchingFlashcardFragment" />
+        <action
+            android:id="@+id/action_flashcardMenuFragment_to_sortingFlashcardFragment"
+            app:destination="@id/sortingFlashcardFragment" />
+        <action
+            android:id="@+id/action_flashcardMenuFragment_to_stacksFlashcardFragment"
+            app:destination="@id/stacksFlashcardFragment" />
+        <action
+            android:id="@+id/action_flashcardMenuFragment_to_treesFlashcardFragment"
+            app:destination="@id/treesFlashcardFragment" />
     </fragment>
     <fragment
         android:id="@+id/linkedListFlashcardFragment"
@@ -333,5 +417,551 @@
         <action
             android:id="@+id/action_aboutUsFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stacksQuizFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.StacksQuizFragment"
+        android:label="fragment_stacks_quiz"
+        tools:layout="@layout/fragment_stacks_quiz" >
+        <action
+            android:id="@+id/action_stacksQuizFragment_to_stacksQuizResultFragment"
+            app:destination="@id/stacksQuizResultFragment" />
+        <action
+            android:id="@+id/action_stacksQuizFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/queuesQuizFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.QueuesQuizFragment"
+        android:label="fragment_queues_quiz"
+        tools:layout="@layout/fragment_queues_quiz" >
+        <action
+            android:id="@+id/action_queuesQuizFragment_to_queuesQuizResultFragment"
+            app:destination="@id/queuesQuizResultFragment" />
+        <action
+            android:id="@+id/action_queuesQuizFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/treesQuizFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.TreesQuizFragment"
+        android:label="fragment_trees_quiz"
+        tools:layout="@layout/fragment_trees_quiz" >
+        <action
+            android:id="@+id/action_treesQuizFragment_to_treesQuizResultFragment"
+            app:destination="@id/treesQuizResultFragment" />
+        <action
+            android:id="@+id/action_treesQuizFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/graphsQuizFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.GraphsQuizFragment"
+        android:label="fragment_graphs_quiz"
+        tools:layout="@layout/fragment_graphs_quiz" >
+        <action
+            android:id="@+id/action_graphsQuizFragment_to_graphsQuizResultFragment"
+            app:destination="@id/graphsQuizResultFragment" />
+        <action
+            android:id="@+id/action_graphsQuizFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hashTablesQuizFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.HashTablesQuizFragment"
+        android:label="fragment_hash_tables_quiz"
+        tools:layout="@layout/fragment_hash_tables_quiz" >
+        <action
+            android:id="@+id/action_hashTablesQuizFragment_to_hashTablesQuizResultFragment"
+            app:destination="@id/hashTablesQuizResultFragment" />
+        <action
+            android:id="@+id/action_hashTablesQuizFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/heapsQuizFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.HeapsQuizFragment"
+        android:label="fragment_heaps_quiz"
+        tools:layout="@layout/fragment_heaps_quiz" >
+        <action
+            android:id="@+id/action_heapsQuizFragment_to_heapsQuizResultFragment"
+            app:destination="@id/heapsQuizResultFragment" />
+        <action
+            android:id="@+id/action_heapsQuizFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sortingQuizFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.SortingQuizFragment"
+        android:label="fragment_sorting_quiz"
+        tools:layout="@layout/fragment_sorting_quiz" >
+        <action
+            android:id="@+id/action_sortingQuizFragment_to_sortingQuizResultFragment"
+            app:destination="@id/sortingQuizResultFragment" />
+        <action
+            android:id="@+id/action_sortingQuizFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchingQuizFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.SearchingQuizFragment"
+        android:label="fragment_searching_quiz"
+        tools:layout="@layout/fragment_searching_quiz" >
+        <action
+            android:id="@+id/action_searchingQuizFragment_to_searchingQuizResultFragment"
+            app:destination="@id/searchingQuizResultFragment" />
+        <action
+            android:id="@+id/action_searchingQuizFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/greedyQuizFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.GreedyQuizFragment"
+        android:label="fragment_greedy_quiz"
+        tools:layout="@layout/fragment_greedy_quiz" >
+        <action
+            android:id="@+id/action_greedyQuizFragment_to_greedyQuizResultFragment"
+            app:destination="@id/greedyQuizResultFragment" />
+        <action
+            android:id="@+id/action_greedyQuizFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/divideAndConquerQuizFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.DivideAndConquerQuizFragment"
+        android:label="fragment_divide_and_conquer_quiz"
+        tools:layout="@layout/fragment_divide_and_conquer_quiz" >
+        <action
+            android:id="@+id/action_divideAndConquerQuizFragment_to_divideAndConquerQuizResultFragment"
+            app:destination="@id/divideAndConquerQuizResultFragment" />
+        <action
+            android:id="@+id/action_divideAndConquerQuizFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dynamicQuizFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.DynamicQuizFragment"
+        android:label="fragment_dynamic_quiz"
+        tools:layout="@layout/fragment_dynamic_quiz" >
+        <action
+            android:id="@+id/action_dynamicQuizFragment_to_dynamicQuizResultFragment"
+            app:destination="@id/dynamicQuizResultFragment" />
+        <action
+            android:id="@+id/action_dynamicQuizFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/backtrackingQuizFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.BacktrackingQuizFragment"
+        android:label="fragment_backtracking_quiz"
+        tools:layout="@layout/fragment_backtracking_quiz" >
+        <action
+            android:id="@+id/action_backtrackingQuizFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+        <action
+            android:id="@+id/action_backtrackingQuizFragment_to_backtrackingQuizResultFragment"
+            app:destination="@id/backtrackingQuizResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bruteForceQuizFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.BruteForceQuizFragment"
+        android:label="fragment_brute_force_quiz"
+        tools:layout="@layout/fragment_brute_force_quiz" >
+        <action
+            android:id="@+id/action_bruteForceQuizFragment_to_bruteForceQuizResultFragment"
+            app:destination="@id/bruteForceQuizResultFragment" />
+        <action
+            android:id="@+id/action_bruteForceQuizFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/arraysQuizFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.ArraysQuizFragment"
+        android:label="fragment_arrays_quiz"
+        tools:layout="@layout/fragment_arrays_quiz" >
+        <action
+            android:id="@+id/action_arraysQuizFragment_to_arraysQuizResultFragment"
+            app:destination="@id/arraysQuizResultFragment" />
+        <action
+            android:id="@+id/action_arraysQuizFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stacksQuizResultFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.StacksQuizResultFragment"
+        android:label="fragment_stacks_quiz_result"
+        tools:layout="@layout/fragment_stacks_quiz_result" >
+        <action
+            android:id="@+id/action_stacksQuizResultFragment_to_feedbackStacksFragment"
+            app:destination="@id/feedbackStacksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/arraysQuizResultFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.ArraysQuizResultFragment"
+        android:label="fragment_arrays_quiz_result"
+        tools:layout="@layout/fragment_arrays_quiz_result" >
+        <action
+            android:id="@+id/action_arraysQuizResultFragment_to_feedbackArraysFragment"
+            app:destination="@id/feedbackArraysFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/queuesQuizResultFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.QueuesQuizResultFragment"
+        android:label="fragment_queues_quiz_result"
+        tools:layout="@layout/fragment_queues_quiz_result" >
+        <action
+            android:id="@+id/action_queuesQuizResultFragment_to_feedbackQueuesFragment"
+            app:destination="@id/feedbackQueuesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/treesQuizResultFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.TreesQuizResultFragment"
+        android:label="fragment_trees_quiz_result"
+        tools:layout="@layout/fragment_trees_quiz_result" >
+        <action
+            android:id="@+id/action_treesQuizResultFragment_to_feedbackTreesFragment"
+            app:destination="@id/feedbackTreesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/graphsQuizResultFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.GraphsQuizResultFragment"
+        android:label="fragment_graphs_quiz_result"
+        tools:layout="@layout/fragment_graphs_quiz_result" >
+        <action
+            android:id="@+id/action_graphsQuizResultFragment_to_feedbackGraphsFragment"
+            app:destination="@id/feedbackGraphsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hashTablesQuizResultFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.HashTablesQuizResultFragment"
+        android:label="fragment_hash_tables_quiz_result"
+        tools:layout="@layout/fragment_hash_tables_quiz_result" >
+        <action
+            android:id="@+id/action_hashTablesQuizResultFragment_to_feedbackHashTablesFragment"
+            app:destination="@id/feedbackHashTablesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/heapsQuizResultFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.HeapsQuizResultFragment"
+        android:label="fragment_heaps_quiz_result"
+        tools:layout="@layout/fragment_heaps_quiz_result" >
+        <action
+            android:id="@+id/action_heapsQuizResultFragment_to_feedbackHeapsFragment"
+            app:destination="@id/feedbackHeapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sortingQuizResultFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.SortingQuizResultFragment"
+        android:label="fragment_sorting_quiz_result"
+        tools:layout="@layout/fragment_sorting_quiz_result" >
+        <action
+            android:id="@+id/action_sortingQuizResultFragment_to_feedbackSortingFragment"
+            app:destination="@id/feedbackSortingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchingQuizResultFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.SearchingQuizResultFragment"
+        android:label="fragment_searching_quiz_result"
+        tools:layout="@layout/fragment_searching_quiz_result" >
+        <action
+            android:id="@+id/action_searchingQuizResultFragment_to_feedbackSearchingFragment"
+            app:destination="@id/feedbackSearchingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/greedyQuizResultFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.GreedyQuizResultFragment"
+        android:label="fragment_greedy_quiz_result"
+        tools:layout="@layout/fragment_greedy_quiz_result" >
+        <action
+            android:id="@+id/action_greedyQuizResultFragment_to_feedbackGreedyFragment"
+            app:destination="@id/feedbackGreedyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/divideAndConquerQuizResultFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.DivideAndConquerQuizResultFragment"
+        android:label="fragment_divide_and_conquer_quiz_result"
+        tools:layout="@layout/fragment_divide_and_conquer_quiz_result" >
+        <action
+            android:id="@+id/action_divideAndConquerQuizResultFragment_to_feedbackDivideAndConquerFragment"
+            app:destination="@id/feedbackDivideAndConquerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dynamicQuizResultFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.DynamicQuizResultFragment"
+        android:label="fragment_dynamic_quiz_result"
+        tools:layout="@layout/fragment_dynamic_quiz_result" >
+        <action
+            android:id="@+id/action_dynamicQuizResultFragment_to_feedbackDynamicFragment"
+            app:destination="@id/feedbackDynamicFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/backtrackingQuizResultFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.BacktrackingQuizResultFragment"
+        android:label="fragment_backtracking_quiz_result"
+        tools:layout="@layout/fragment_backtracking_quiz_result" >
+        <action
+            android:id="@+id/action_backtrackingQuizResultFragment_to_feedbackBacktrackingFragment"
+            app:destination="@id/feedbackBacktrackingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bruteForceQuizResultFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.BruteForceQuizResultFragment"
+        android:label="fragment_brute_force_quiz_result"
+        tools:layout="@layout/fragment_brute_force_quiz_result" >
+        <action
+            android:id="@+id/action_bruteForceQuizResultFragment_to_feedbackBruteForceFragment"
+            app:destination="@id/feedbackBruteForceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedbackStacksFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.FeedbackStacksFragment"
+        android:label="fragment_feedback_stacks"
+        tools:layout="@layout/fragment_feedback_stacks" >
+        <action
+            android:id="@+id/action_feedbackStacksFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedbackArraysFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.FeedbackArraysFragment"
+        android:label="fragment_feedback_arrays"
+        tools:layout="@layout/fragment_feedback_arrays" >
+        <action
+            android:id="@+id/action_feedbackArraysFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedbackQueuesFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.FeedbackQueuesFragment"
+        android:label="fragment_feedback_queues"
+        tools:layout="@layout/fragment_feedback_queues" >
+        <action
+            android:id="@+id/action_feedbackQueuesFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedbackTreesFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.FeedbackTreesFragment"
+        android:label="fragment_feedback_trees"
+        tools:layout="@layout/fragment_feedback_trees" >
+        <action
+            android:id="@+id/action_feedbackTreesFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedbackGraphsFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.FeedbackGraphsFragment"
+        android:label="fragment_feedback_graphs"
+        tools:layout="@layout/fragment_feedback_graphs" >
+        <action
+            android:id="@+id/action_feedbackGraphsFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedbackHashTablesFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.FeedbackHashTablesFragment"
+        android:label="fragment_feedback_hash_tables"
+        tools:layout="@layout/fragment_feedback_hash_tables" >
+        <action
+            android:id="@+id/action_feedbackHashTablesFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedbackHeapsFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.FeedbackHeapsFragment"
+        android:label="fragment_feedback_heaps"
+        tools:layout="@layout/fragment_feedback_heaps" >
+        <action
+            android:id="@+id/action_feedbackHeapsFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedbackSortingFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.FeedbackSortingFragment"
+        android:label="fragment_feedback_sorting"
+        tools:layout="@layout/fragment_feedback_sorting" >
+        <action
+            android:id="@+id/action_feedbackSortingFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedbackSearchingFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.FeedbackSearchingFragment"
+        android:label="fragment_feedback_searching"
+        tools:layout="@layout/fragment_feedback_searching" >
+        <action
+            android:id="@+id/action_feedbackSearchingFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedbackGreedyFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.FeedbackGreedyFragment"
+        android:label="fragment_feedback_greedy"
+        tools:layout="@layout/fragment_feedback_greedy" >
+        <action
+            android:id="@+id/action_feedbackGreedyFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedbackDivideAndConquerFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.FeedbackDivideAndConquerFragment"
+        android:label="fragment_feedback_divide_and_conquer"
+        tools:layout="@layout/fragment_feedback_divide_and_conquer" >
+        <action
+            android:id="@+id/action_feedbackDivideAndConquerFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedbackDynamicFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.FeedbackDynamicFragment"
+        android:label="fragment_feedback_dynamic"
+        tools:layout="@layout/fragment_feedback_dynamic" >
+        <action
+            android:id="@+id/action_feedbackDynamicFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedbackBacktrackingFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.FeedbackBacktrackingFragment"
+        android:label="fragment_feedback_backtracking"
+        tools:layout="@layout/fragment_feedback_backtracking" >
+        <action
+            android:id="@+id/action_feedbackBacktrackingFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedbackBruteForceFragment"
+        android:name="com.example.buildingblocksteam1.Quiz.FeedbackBruteForceFragment"
+        android:label="fragment_feedback_brute_force"
+        tools:layout="@layout/fragment_feedback_brute_force" >
+        <action
+            android:id="@+id/action_feedbackBruteForceFragment_to_quizMenuFragment"
+            app:destination="@id/quizMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stacksFlashcardFragment"
+        android:name="com.example.buildingblocksteam1.Flashcard.StacksFlashcardFragment"
+        android:label="fragment_stacks_flashcard"
+        tools:layout="@layout/fragment_stacks_flashcard" >
+        <action
+            android:id="@+id/action_stacksFlashcardFragment_to_flashcardMenuFragment"
+            app:destination="@id/flashcardMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/arraysFlashcardFragment"
+        android:name="com.example.buildingblocksteam1.Flashcard.ArraysFlashcardFragment"
+        android:label="fragment_arrays_flashcard"
+        tools:layout="@layout/fragment_arrays_flashcard" >
+        <action
+            android:id="@+id/action_arraysFlashcardFragment_to_flashcardMenuFragment"
+            app:destination="@id/flashcardMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/queuesFlashcardFragment"
+        android:name="com.example.buildingblocksteam1.Flashcard.QueuesFlashcardFragment"
+        android:label="fragment_queues_flashcard"
+        tools:layout="@layout/fragment_queues_flashcard" >
+        <action
+            android:id="@+id/action_queuesFlashcardFragment_to_flashcardMenuFragment"
+            app:destination="@id/flashcardMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/treesFlashcardFragment"
+        android:name="com.example.buildingblocksteam1.Flashcard.TreesFlashcardFragment"
+        android:label="fragment_trees_flashcard"
+        tools:layout="@layout/fragment_trees_flashcard" >
+        <action
+            android:id="@+id/action_treesFlashcardFragment_to_flashcardMenuFragment"
+            app:destination="@id/flashcardMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/graphsFlashcardFragment"
+        android:name="com.example.buildingblocksteam1.Flashcard.GraphsFlashcardFragment"
+        android:label="fragment_graphs_flashcard"
+        tools:layout="@layout/fragment_graphs_flashcard" >
+        <action
+            android:id="@+id/action_graphsFlashcardFragment_to_flashcardMenuFragment"
+            app:destination="@id/flashcardMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hashTablesFlashcardFragment"
+        android:name="com.example.buildingblocksteam1.Flashcard.HashTablesFlashcardFragment"
+        android:label="fragment_hash_tables_flashcard"
+        tools:layout="@layout/fragment_hash_tables_flashcard" >
+        <action
+            android:id="@+id/action_hashTablesFlashcardFragment_to_flashcardMenuFragment"
+            app:destination="@id/flashcardMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/heapsFlashcardFragment"
+        android:name="com.example.buildingblocksteam1.Flashcard.HeapsFlashcardFragment"
+        android:label="fragment_heaps_flashcard"
+        tools:layout="@layout/fragment_heaps_flashcard" >
+        <action
+            android:id="@+id/action_heapsFlashcardFragment_to_flashcardMenuFragment"
+            app:destination="@id/flashcardMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sortingFlashcardFragment"
+        android:name="com.example.buildingblocksteam1.Flashcard.SortingFlashcardFragment"
+        android:label="fragment_sorting_flashcard"
+        tools:layout="@layout/fragment_sorting_flashcard" >
+        <action
+            android:id="@+id/action_sortingFlashcardFragment_to_flashcardMenuFragment"
+            app:destination="@id/flashcardMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchingFlashcardFragment"
+        android:name="com.example.buildingblocksteam1.Flashcard.SearchingFlashcardFragment"
+        android:label="fragment_searching_flashcard"
+        tools:layout="@layout/fragment_searching_flashcard" >
+        <action
+            android:id="@+id/action_searchingFlashcardFragment_to_flashcardMenuFragment"
+            app:destination="@id/flashcardMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/greedyFlashcardFragment"
+        android:name="com.example.buildingblocksteam1.Flashcard.GreedyFlashcardFragment"
+        android:label="fragment_greedy_flashcard"
+        tools:layout="@layout/fragment_greedy_flashcard" >
+        <action
+            android:id="@+id/action_greedyFlashcardFragment_to_flashcardMenuFragment"
+            app:destination="@id/flashcardMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dynamicFlashcardFragment"
+        android:name="com.example.buildingblocksteam1.Flashcard.DynamicFlashcardFragment"
+        android:label="fragment_dynamic_flashcard"
+        tools:layout="@layout/fragment_dynamic_flashcard" >
+        <action
+            android:id="@+id/action_dynamicFlashcardFragment_to_flashcardMenuFragment"
+            app:destination="@id/flashcardMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/backtrackingFlashcardFragment"
+        android:name="com.example.buildingblocksteam1.Flashcard.BacktrackingFlashcardFragment"
+        android:label="fragment_backtracking_flashcard"
+        tools:layout="@layout/fragment_backtracking_flashcard" >
+        <action
+            android:id="@+id/action_backtrackingFlashcardFragment_to_flashcardMenuFragment"
+            app:destination="@id/flashcardMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bruteForceFlashcardFragment"
+        android:name="com.example.buildingblocksteam1.Flashcard.BruteForceFlashcardFragment"
+        android:label="fragment_brute_force_flashcard"
+        tools:layout="@layout/fragment_brute_force_flashcard" >
+        <action
+            android:id="@+id/action_bruteForceFlashcardFragment_to_flashcardMenuFragment"
+            app:destination="@id/flashcardMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/divideAndConquerFlashcardFragment"
+        android:name="com.example.buildingblocksteam1.Flashcard.DivideAndConquerFlashcardFragment"
+        android:label="fragment_divide_and_conquer_flashcard"
+        tools:layout="@layout/fragment_divide_and_conquer_flashcard" >
+        <action
+            android:id="@+id/action_divideAndConquerFlashcardFragment_to_flashcardMenuFragment"
+            app:destination="@id/flashcardMenuFragment" />
     </fragment>
 </navigation>
