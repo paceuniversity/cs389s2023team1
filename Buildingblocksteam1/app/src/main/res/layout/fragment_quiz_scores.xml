@@ -133,11 +133,11 @@
                 android:text="Dynamic Programming Quiz Score: Not Completed"></Button>
 
             <Button
-                android:id="@+id/button_backtracing"
+                android:id="@+id/button_backtracking"
                 android:layout_width="411dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/button_text"
-                android:text="Backtracing Quiz Score: Not Completed"></Button>
+                android:text="Backtracking Quiz Score: Not Completed"></Button>
 
             <Button
                 android:id="@+id/button_brute_force"
@@ -145,20 +145,6 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/button_text"
                 android:text="Brute Force Quiz Score: Not Completed"></Button>
-
-            <Button
-                android:id="@+id/button_randomized"
-                android:layout_width="411dp"
-                android:layout_height="wrap_content"
-                android:textColor="@color/button_text"
-                android:text="Randomized Quiz Score: Not Completed"></Button>
-
-            <Button
-                android:id="@+id/button_string_matching"
-                android:layout_width="411dp"
-                android:layout_height="wrap_content"
-                android:textColor="@color/button_text"
-                android:text="String Matching Quiz Score: Not Completed"></Button>
 
         </LinearLayout>
 
