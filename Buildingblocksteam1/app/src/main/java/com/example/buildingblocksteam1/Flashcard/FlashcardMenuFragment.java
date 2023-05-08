@@ -84,13 +84,116 @@ public class FlashcardMenuFragment extends Fragment {
                         .navigate(R.id.action_flashcardMenuFragment_to_linkedListFlashcardFragment);
             }
         });
+        binding.buttonArrays.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                NavHostFragment.findNavController(FlashcardMenuFragment.this)
+                        .navigate(R.id.action_flashcardMenuFragment_to_arraysFlashcardFragment);
+            }
+        });
         binding.buttonStacks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 NavHostFragment.findNavController(FlashcardMenuFragment.this)
-                        .navigate(R.id.action_quizMenuFragment_to_quizScoresFragment);
+                        .navigate(R.id.action_flashcardMenuFragment_to_stacksFlashcardFragment);
+            }
+        });
+        binding.buttonQueues.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(FlashcardMenuFragment.this)
+                        .navigate(R.id.action_flashcardMenuFragment_to_queuesFlashcardFragment);
+            }
+        });
+        binding.buttonTrees.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(FlashcardMenuFragment.this)
+                        .navigate(R.id.action_flashcardMenuFragment_to_treesFlashcardFragment);
+            }
+        });
+        binding.buttonGraphs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(FlashcardMenuFragment.this)
+                        .navigate(R.id.action_flashcardMenuFragment_to_graphsFlashcardFragment);
+            }
+        });
+        binding.buttonHashTables.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(FlashcardMenuFragment.this)
+                        .navigate(R.id.action_flashcardMenuFragment_to_hashTablesFlashcardFragment);
+            }
+        });
+        binding.buttonHeaps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(FlashcardMenuFragment.this)
+                        .navigate(R.id.action_flashcardMenuFragment_to_heapsFlashcardFragment);
+            }
+        });
+        binding.buttonSorting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(FlashcardMenuFragment.this)
+                        .navigate(R.id.action_flashcardMenuFragment_to_sortingFlashcardFragment);
+            }
+        });
+        binding.buttonSearching.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(FlashcardMenuFragment.this)
+                        .navigate(R.id.action_flashcardMenuFragment_to_searchingFlashcardFragment);
+            }
+        });
+        binding.buttonGreedy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(FlashcardMenuFragment.this)
+                        .navigate(R.id.action_flashcardMenuFragment_to_greedyFlashcardFragment);
+            }
+        });
+        binding.buttonDivideConquer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(FlashcardMenuFragment.this)
+                        .navigate(R.id.action_flashcardMenuFragment_to_divideAndConquerFlashcardFragment);
+            }
+        });
+        binding.buttonDynamicProgramming.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(FlashcardMenuFragment.this)
+                        .navigate(R.id.action_flashcardMenuFragment_to_dynamicFlashcardFragment);
+            }
+        });
+        binding.buttonBacktracking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(FlashcardMenuFragment.this)
+                        .navigate(R.id.action_flashcardMenuFragment_to_backtrackingFlashcardFragment);
+            }
+        });
+        binding.buttonBruteForce.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NavHostFragment.findNavController(FlashcardMenuFragment.this)
+                        .navigate(R.id.action_flashcardMenuFragment_to_bruteForceFlashcardFragment);
             }
         });
         binding.backArrow.setOnClickListener(new View.OnClickListener() {

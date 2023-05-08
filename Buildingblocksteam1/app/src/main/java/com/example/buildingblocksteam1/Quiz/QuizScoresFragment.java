@@ -82,6 +82,92 @@ public class QuizScoresFragment extends Fragment {
                 binding.buttonLinkedList.setText(("LinkedList Quiz Score: " + viewModel.getLinkedListScore().getValue() + "%"));
             }
         });
+        viewModel.getStacksScore().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String data) {
+                binding.buttonStacks.setText(("Stacks Quiz Score: " + viewModel.getStacksScore().getValue() + "%"));
+            }
+        });
+        viewModel.getArraysScore().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String data) {
+                binding.buttonArrays.setText(("Arrays Quiz Score: " + viewModel.getArraysScore().getValue() + "%"));
+            }
+        });
+        viewModel.getQueuesScore().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String data) {
+                binding.buttonQueues.setText(("Queues Quiz Score: " + viewModel.getQueuesScore().getValue() + "%"));
+            }
+        });
+        viewModel.getTreesScore().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String data) {
+                binding.buttonTrees.setText(("Trees Quiz Score: " + viewModel.getTreesScore().getValue() + "%"));
+            }
+        });
+        viewModel.getGraphsScore().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String data) {
+                binding.buttonGraphs.setText(("Graphs Quiz Score: " + viewModel.getGraphsScore().getValue() + "%"));
+            }
+        });
+        viewModel.getHashTablesScore().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String data) {
+                binding.buttonHashTables.setText(("HashTables Quiz Score: " + viewModel.getHashTablesScore().getValue() + "%"));
+            }
+        });
+        viewModel.getHeapsScore().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String data) {
+                binding.buttonHeaps.setText(("Heaps Quiz Score: " + viewModel.getHeapsScore().getValue() + "%"));
+            }
+        });
+        viewModel.getSortingScore().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String data) {
+                binding.buttonSorting.setText(("Sorting Quiz Score: " + viewModel.getSortingScore().getValue() + "%"));
+            }
+        });
+        viewModel.getSearchingScore().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String data) {
+                binding.buttonSearching.setText(("Searching Quiz Score: " + viewModel.getSearchingScore().getValue() + "%"));
+            }
+        });
+        viewModel.getGreedyScore().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String data) {
+                binding.buttonGreedy.setText(("Greedy Quiz Score: " + viewModel.getGreedyScore().getValue() + "%"));
+            }
+        });
+        viewModel.getDivideAndConquerScore().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String data) {
+                binding.buttonDivideConquer.setText(("DivideAndConquer Quiz Score: " + viewModel.getDivideAndConquerScore().getValue() + "%"));
+            }
+        });
+        viewModel.getDynamicScore().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String data) {
+                binding.buttonDynamicProgramming.setText(("Dynamic Quiz Score: " + viewModel.getDynamicScore().getValue() + "%"));
+            }
+        });
+        viewModel.getBacktrackingScore().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String data) {
+                binding.buttonBacktracking.setText(("Backtracking Quiz Score: " + viewModel.getBacktrackingScore().getValue() + "%"));
+            }
+        });
+        viewModel.getBruteForceScore().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String data) {
+                binding.buttonBruteForce.setText(("BruteForce Quiz Score: " + viewModel.getBruteForceScore().getValue() + "%"));
+            }
+        });
+
+
 
         return binding.getRoot();
 
