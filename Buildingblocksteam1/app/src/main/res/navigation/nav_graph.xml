@@ -255,6 +255,9 @@
         <action
             android:id="@+id/action_linkedListLectureFragment_to_linkedListQuizFragment"
             app:destination="@id/linkedListQuizFragment" />
+        <action
+            android:id="@+id/action_linkedListLectureFragment_to_linkedListFlashcardFragment"
+            app:destination="@id/linkedListFlashcardFragment" />
     </fragment>
     <fragment
         android:id="@+id/flashcardMenuFragment"
