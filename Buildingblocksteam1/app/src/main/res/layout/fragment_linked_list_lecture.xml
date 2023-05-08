@@ -23,6 +23,8 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+
+
             app:videoId="ge8iG7JecR4" />
 
         <ImageView
@@ -55,28 +57,30 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="408dp"
-            android:layout_height="428dp"
+            android:layout_width="424dp"
+            android:layout_height="274dp"
             android:text="@string/linked_list_lec"
-            android:textColor="@color/figma_lime_green"
             android:textAlignment="center"
+            android:textColor="@color/figma_lime_green"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/youtube_player_view" />
+            app:layout_constraintTop_toBottomOf="@+id/youtube_player_view"
+            app:layout_constraintVertical_bias="0.066" />
 
         <Button
             android:id="@+id/locate_quiz"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="88dp"
+            android:layout_height="47dp"
             android:text="Quiz"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.773"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.846" />
+            app:layout_constraintVertical_bias="0.933" />
 
         <Button
             android:id="@+id/locate_flashcards"
@@ -86,10 +90,10 @@
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.521"
+            app:layout_constraintHorizontal_bias="0.187"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.924" />
+            app:layout_constraintVertical_bias="0.93" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
