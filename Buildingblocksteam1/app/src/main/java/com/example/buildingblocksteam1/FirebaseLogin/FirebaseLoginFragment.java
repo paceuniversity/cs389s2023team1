@@ -99,7 +99,8 @@ public class FirebaseLoginFragment extends Fragment {
                             Log.w(TAG, "LoginWithEmail:failure", task.getException());
                             Toast.makeText(getContext(), "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
-                            reload();
+                            NavHostFragment.findNavController(FirebaseLoginFragment.this)
+                                    .navigate(R.id.action_reload_to_FirstFragment2);
 
 
                         }
